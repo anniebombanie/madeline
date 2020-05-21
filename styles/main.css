@@ -37,6 +37,45 @@ body {
   background-size: auto 96%;
 }
 
+.madeline__head {
+  width: 35%;
+  height: 12%;
+  position: absolute;
+  top: 54%;
+  left: 38%;
+  background-color: rgba(239, 222, 189, 0.5);
+}
+
+.madeline__body {
+  width: 55%;
+  height: 25%;
+  background-color: rgba(1, 1, 82, 0.5);
+  position: absolute;
+  top: 66%;
+  left: 27%;
+}
+
+.madeline__arm--left, .madeline__arm--right {
+  background-color: rgba(239, 222, 189, 0.5);
+  position: absolute;
+}
+
+.madeline__arm--left {
+  width: 8%;
+  height: 10%;
+  top: 54%;
+  left: 27%;
+  rotate: -28deg;
+}
+
+.madeline__arm--right {
+  width: 13%;
+  height: 4%;
+  top: 67.5%;
+  left: 77%;
+  rotate: 5deg;
+}
+
 .madeline__balloon {
   width: 49%;
   height: 24%;

@@ -50,41 +50,43 @@ body {
   background: 0.2;
   background-size: auto 96%;
 
-  // &__head {
-  //   @include w-h( 20%, 20% );
-  //   position: absolute;
-  //   top: 0;
-  //   left: 50%;
-  //   background-color: $skin;
-  // }
+  &__head {
+    @include w-h( 35%, 12% );
+    position: absolute;
+    top: 54%;
+    left: 38%;
+    background-color: rgba( $skin, 0.5 );
+  }
 
-  // &__body {
-  //   @include w-h( 20%, 50% );
-  //   background-color: $navy;
-  //   position: absolute;
-  //   top: 20%;
-  //   left: 40%;
-  // }
+  &__body {
+    @include w-h( 55%, 25% );
+    background-color: rgba( $navy, 0.5 );
+    position: absolute;
+    top: 66%;
+    left: 27%;
+  }
 
-  // &__arm {
-  //   &--left,
-  //   &--right {
-  //     background-color: $skin;
-  //     position: absolute;
-  //   }
+  &__arm {
+    &--left,
+    &--right {
+      background-color: rgba( $skin, 0.5 );
+      position: absolute;
+    }
 
-  //   &--left {
-  //     @include w-h( 20%, 20% );
-  //     top: 30%;
-  //     left: 20%;
-  //   }
+    &--left {
+      @include w-h( 8%, 10% );
+      top: 54%;
+      left: 27%;
+      rotate: -28deg;
+    }
 
-  //   &--right {
-  //     @include w-h( 20%, 20% );
-  //     top: 30%;
-  //     left: 60%;
-  //   }
-  // }
+    &--right {
+      @include w-h( 13%, 4% );
+      top: 67.5%;
+      left: 77%;
+      rotate: 5deg;
+    }
+  }
 
   &__balloon {
     @include w-h( 49%, 24% );

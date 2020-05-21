@@ -1,10 +1,11 @@
 // head: can animate two divs that are eyes & full head can move
 :root {
-  --res-h: 70vmax;
+  --res-h: 68vmax;
   --res-w: 30vmax;
 
+  // 1.2x
   @media only screen and ( orientation: landscape ) {
-    --res-h: 84vmin;
+    --res-h: 81.6vmin;
     --res-w: 36vmin;
   }
 }
@@ -45,7 +46,8 @@ body {
 .madeline {
   @include w-h( var( --res-w ), var( --res-h ));
   position: relative;
-  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 54% 340% no-repeat;
+  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  background: 0.2;
   background-size: auto 96%;
 
   // &__head {
@@ -85,7 +87,7 @@ body {
   // }
 
   &__balloon {
-    @include w-h( 40%, 20% );
+    @include w-h( 49%, 24% );
     position: absolute;
     background-color: rgba( $red , 0.7 );
     border-radius: 50%;

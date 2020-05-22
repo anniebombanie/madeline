@@ -54,7 +54,7 @@ body {
 
   &__head {
     @include w-h( 35%, 12% );
-    position: relative;
+    position: absolute;
     top: 54%;
     left: 38%;
     // background-color: rgba( $skin, 0.5 );
@@ -64,9 +64,8 @@ body {
     background: linear-gradient( 0deg, $black 20%, $T 20% ) 40% 20% / 100% 100%, $skin;
 
     &::before {
-      @include w-h( 35%, 22% );
+      @include pseduo-div( 100%, 60%, $orange );
       position: absolute;
-      background-color: $orange;
       top: 20%;
       left: 20%;
     }
@@ -95,7 +94,7 @@ body {
     // }
   }
 
-  &__body {
+  &__dress {
     @include w-h( 56%, 27% );
     position: absolute;
     background-color: $white;
@@ -108,20 +107,18 @@ body {
     // legs
     &::before,
     &::after {
-      background-color: $skin;
-      // background-color: rgba( $skin, 0.5 );
       position: absolute;
     }
 
     &::before {
-      @include w-h( 8%, 10% );
+      @include pseduo-div( 8%, 10%,  $skin );
       top: 94%;
       left: 27%;
       rotate: -28deg;
     }
 
     &::after {
-      @include w-h( 13%, 4% );
+      @include pseduo-div( 8%, 10%,  $skin );
       top: 90%;
       left: 77%;
       rotate: 5deg;
@@ -159,6 +156,12 @@ body {
     overflow: hidden;
     top: 0;
     left: 0;
+
+    &::after {
+      @include pseduo-div( 13%, 4%,  $red );
+      top: 90%;
+      left: 77%;
+    }
   }
 }
 

@@ -38,7 +38,7 @@ body {
 .madeline__head {
   width: 35%;
   height: 12%;
-  position: relative;
+  position: absolute;
   top: 54%;
   left: 38%;
   border-radius: 70% 80% 60% 80% / 70% 70% 60% 70%;
@@ -47,10 +47,12 @@ body {
 }
 
 .madeline__head::before {
-  width: 35%;
-  height: 22%;
+  content: '';
+  width: 100%;
+  height: 60%;
   position: absolute;
   background-color: #d25317;
+  position: absolute;
   top: 20%;
   left: 20%;
 }
@@ -74,7 +76,7 @@ body {
   left: 71%;
 }
 
-.madeline__body {
+.madeline__dress {
   width: 56%;
   height: 27%;
   position: absolute;
@@ -85,22 +87,27 @@ body {
   left: 25%;
 }
 
-.madeline__body::before, .madeline__body::after {
-  background-color: #efdebd;
+.madeline__dress::before, .madeline__dress::after {
   position: absolute;
 }
 
-.madeline__body::before {
+.madeline__dress::before {
+  content: '';
   width: 8%;
   height: 10%;
+  position: absolute;
+  background-color: #efdebd;
   top: 94%;
   left: 27%;
   rotate: -28deg;
 }
 
-.madeline__body::after {
-  width: 13%;
-  height: 4%;
+.madeline__dress::after {
+  content: '';
+  width: 8%;
+  height: 10%;
+  position: absolute;
+  background-color: #efdebd;
   top: 90%;
   left: 77%;
   rotate: 5deg;
@@ -136,4 +143,14 @@ body {
   overflow: hidden;
   top: 0;
   left: 0;
+}
+
+.madeline__balloon::after {
+  content: '';
+  width: 13%;
+  height: 4%;
+  position: absolute;
+  background-color: #dd2602;
+  top: 90%;
+  left: 77%;
 }

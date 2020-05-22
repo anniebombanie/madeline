@@ -13,8 +13,6 @@
 body {
   margin: 0;
   background: #d8b9d7;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e89b9d), color-stop(#f7e957), to(#fff));
-  background: linear-gradient(#e89b9d, #f7e957, #fff);
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,23 +38,76 @@ body {
 .madeline__head {
   width: 35%;
   height: 12%;
-  position: absolute;
+  position: relative;
   top: 54%;
   left: 38%;
-  background-color: rgba(239, 222, 189, 0.5);
+  border-radius: 70% 80% 60% 80% / 70% 70% 60% 70%;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #000), color-stop(20%, transparent)) 40% 20%/100% 100%, #efdebd;
+  background: linear-gradient(0deg, #000 20%, transparent 20%) 40% 20%/100% 100%, #efdebd;
+}
+
+.madeline__head::before {
+  width: 35%;
+  height: 22%;
+  position: absolute;
+  background-color: #d25317;
+  top: 20%;
+  left: 20%;
+}
+
+.madeline__head--face::before, .madeline__head--face::after {
+  content: '';
+  width: 6%;
+  height: 9%;
+  position: absolute;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.madeline__head--face::before {
+  top: 32%;
+  left: 34%;
+}
+
+.madeline__head--face::after {
+  top: 34%;
+  left: 71%;
 }
 
 .madeline__body {
-  width: 55%;
-  height: 25%;
-  background-color: rgba(1, 1, 82, 0.5);
+  width: 56%;
+  height: 27%;
   position: absolute;
-  top: 66%;
+  background-color: #fff;
+  border-radius: 0 0 45% 55% / 0 0 20% 20%;
+  rotate: -2deg;
+  top: 65%;
+  left: 25%;
+}
+
+.madeline__body::before, .madeline__body::after {
+  background-color: #efdebd;
+  position: absolute;
+}
+
+.madeline__body::before {
+  width: 8%;
+  height: 10%;
+  top: 94%;
   left: 27%;
+  rotate: -28deg;
+}
+
+.madeline__body::after {
+  width: 13%;
+  height: 4%;
+  top: 90%;
+  left: 77%;
+  rotate: 5deg;
 }
 
 .madeline__arm--left, .madeline__arm--right {
-  background-color: rgba(239, 222, 189, 0.5);
+  background-color: #efdebd;
   position: absolute;
 }
 

@@ -37,7 +37,7 @@ body {
   overflow: hidden;
 }
 
-.madeline {
+.madeline-container {
   width: var(--res-w);
   height: var(--res-h);
   position: relative;
@@ -46,31 +46,7 @@ body {
   background-size: auto 96%;
 }
 
-.madeline__head {
-  width: 79%;
-  height: 26%;
-  position: absolute;
-  top: 40%;
-  left: 11.5%;
-}
-
-.madeline__head--hair {
-  content: '';
-  width: 82%;
-  height: 50%;
-  position: absolute;
-  background-color: transparent;
-  position: absolute;
-  border-radius: 50%;
-  border: 1px dashed black;
-  top: 49%;
-  left: 11%;
-  border-radius: 50% 50% 60% 60% / 90% 90% 35% 35%;
-  -webkit-transform: rotateZ(2deg);
-          transform: rotateZ(2deg);
-}
-
-.madeline__balloon {
+.balloon {
   width: 49%;
   height: 24%;
   position: absolute;
@@ -80,10 +56,11 @@ body {
   left: 0;
 }
 
-.madeline__balloon::after {
+.balloon::after {
   content: '';
   width: 0;
   height: 0;
+  display: block;
   position: absolute;
   background-color: transparent;
   border-left: 1.5vmin solid transparent;
@@ -96,16 +73,95 @@ body {
           transform: rotateZ(3deg);
 }
 
-div {
-  z-index: 30;
+.head {
+  width: 79%;
+  height: 26%;
+  position: relative;
+  top: 40%;
+  left: 11.5%;
 }
 
-div::after {
+.head::before, .head::after {
+  content: '';
+  width: 3vmax;
+  height: 3vmax;
+  display: block;
   position: absolute;
-  z-index: 10;
+  background-color: transparent;
+  z-index: -10;
+  border-bottom: 5vmax solid #000;
 }
 
-div::before {
+.head::before {
+  border-right: 4vmax solid transparent;
+  top: 1.6vmin;
+  left: 11.2vmin;
+  -webkit-transform: rotateZ(-8deg);
+          transform: rotateZ(-8deg);
+}
+
+.head::after {
+  border-left: 4vmax solid transparent;
+  top: 0.4vmin;
+  left: 16vmin;
+  -webkit-transform: rotateZ(-3deg);
+          transform: rotateZ(-3deg);
+}
+
+.head__hair {
+  width: 80%;
+  height: 50%;
+  border-radius: 50%;
+  border: 1px dashed black;
   position: absolute;
-  z-index: 20;
+  top: 49%;
+  left: 12%;
+  border-radius: 50% 50% 60% 60% / 90% 90% 35% 35%;
+  -webkit-transform: rotateZ(2deg);
+          transform: rotateZ(2deg);
+}
+
+.head__face {
+  width: 44%;
+  height: 45%;
+  border-radius: 70% 70% 60% 80% / 90% 70% 60% 70%;
+  background: radial-gradient(circle at 60% 60%, green 20vmax);
+  position: absolute;
+  top: 55%;
+  left: 33%;
+}
+
+.head__face::before, .head__face::after {
+  content: '';
+  width: 6%;
+  height: 9%;
+  display: block;
+  position: absolute;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.head__face::before {
+  top: 32%;
+  left: 34%;
+}
+
+.head__face::after {
+  top: 34%;
+  left: 71%;
+}
+
+.head__hat {
+  width: 100%;
+  height: 100%;
+  border-left: 13vmax solid transparent;
+  border-right: 13vmax solid transparent;
+  border-top: 18vmax solid #f7e957;
+  border: 1px dashed black;
+  position: absolute;
+  top: 26.5%;
+  left: -4%;
+  border-radius: 50%;
+  -webkit-transform: rotateZ(2deg);
+          transform: rotateZ(2deg);
 }

@@ -26,12 +26,13 @@ body {
 }
 
 .madeline-container {
-  width: 30vmin;
-  height: 68vmin;
+  width: 40.5vmin;
+  height: 91.8vmin;
   position: relative;
+  background: url("https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg") 53.5% 340% no-repeat;
   background: 0.2;
   background-size: auto 96%;
-  z-index: -20;
+  border: 1px solid red;
 }
 
 .balloon {
@@ -153,7 +154,7 @@ body {
   left: 71%;
 }
 
-body {
+.body {
   width: 56%;
   height: 27%;
   position: absolute;

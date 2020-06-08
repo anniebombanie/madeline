@@ -44,12 +44,13 @@ body {
 }
 
 .madeline-container {
-  @include w-h( 30vmin, 68vmin );
+  @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
-  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   background: 0.2;
   background-size: auto 96%;
-  z-index: -20;
+  border: 1px solid red;
+  // z-index: -20;
 }
 
 .balloon {
@@ -169,7 +170,7 @@ body {
 }
 
 // TO DO: Make body box bigger
-body {
+.body {
   @include w-h( 56%, 27% );
   position: absolute;
   // background-color: $navy;

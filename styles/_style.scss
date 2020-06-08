@@ -89,31 +89,31 @@ body {
   // top bow ribbons
   &::before,
   &::after {
-    @include pseduo-div( 3vmin, 3vmin, $t );
+    @include pseduo-div( 0, 0, $t );
     z-index: -10;
-    border-bottom: 5vmin solid $b;
+    border-bottom: 7vmin solid $b;
   }
 
   &::before {
-    border-right: 4vmin solid $t;
-    top: 1.6vmin;
-    left: 7.9vmin;
+    border-right: 6vmin solid $t;
+    top: 5%;
+    left: 31.5%;
     transform: rotateZ( -8deg );
   }
 
   &::after {
-    border-left: 4vmin solid $t;
-    top: 1vmin;
-    left: 10.4vmin;
-    transform: rotateZ( -3deg );
+    border-left: 6vmin solid $t;
+    top: 2%;
+    left: 42.5%;
+    transform: rotateZ( -3.5deg );
   }
 
   // hair
   &__hair {
     @include w-h( 80%, 47% );
     border-radius: 50%;
-    // background-color: $o;
-    border: 1px dashed black;
+    background-color: $o;
+    // border: 1px dashed black;
     position: absolute;
     top: 52%;
     left: 12%;
@@ -161,22 +161,20 @@ body {
     }
   }
 
-  // &__hat {
-  //   @include w-h( 100%, 100% );
-  //   border-left: 13vmin solid $t;
-  //   border-right: 13vmin solid $t;
-  //   border-top: 18vmin solid $y;
-  //   // border: 1px dashed black;
-  //   // @include w-h( 0, 30% );
-  //   // border-left: 17vmin solid transparent;
-  //   // border-right: 17vmin solid transparent;
-  //   // border-top: 13vmin solid $y;
-  //   position: absolute;
-  //   top: 26.5%;
-  //   left: -4%;
-  //   border-radius: 50%;
-  //   transform: rotateZ( 2deg );
-  // }
+  &__hat {
+    @include w-h( 84%, 36% );
+    background-color: $y;
+    border-radius: 70% 70% 50% 50% / 90% 90% 65% 65%;
+    // border: 1px dashed black;
+    // @include w-h( 0, 30% );
+    // border-left: 17vmin solid transparent;
+    // border-right: 17vmin solid transparent;
+    // border-top: 13vmin solid $y;
+    position: absolute;
+    top: 28%;
+    left: 15%;
+    transform: rotateZ( 4deg );
+  }
 }
 
 // TO DO: Make body box bigger

@@ -84,36 +84,36 @@ body {
 
 .head::before, .head::after {
   content: '';
-  width: 3vmin;
-  height: 3vmin;
+  width: 0;
+  height: 0;
   display: block;
   position: absolute;
   background-color: transparent;
   z-index: -10;
-  border-bottom: 5vmin solid #000;
+  border-bottom: 7vmin solid #000;
 }
 
 .head::before {
-  border-right: 4vmin solid transparent;
-  top: 1.6vmin;
-  left: 7.9vmin;
+  border-right: 6vmin solid transparent;
+  top: 5%;
+  left: 31.5%;
   -webkit-transform: rotateZ(-8deg);
           transform: rotateZ(-8deg);
 }
 
 .head::after {
-  border-left: 4vmin solid transparent;
-  top: 1vmin;
-  left: 10.4vmin;
-  -webkit-transform: rotateZ(-3deg);
-          transform: rotateZ(-3deg);
+  border-left: 6vmin solid transparent;
+  top: 2%;
+  left: 42.5%;
+  -webkit-transform: rotateZ(-3.5deg);
+          transform: rotateZ(-3.5deg);
 }
 
 .head__hair {
   width: 80%;
   height: 47%;
   border-radius: 50%;
-  border: 1px dashed black;
+  background-color: #d25317;
   position: absolute;
   top: 52%;
   left: 12%;
@@ -150,6 +150,18 @@ body {
 .head__face::after {
   top: 34%;
   left: 72%;
+}
+
+.head__hat {
+  width: 84%;
+  height: 36%;
+  background-color: #f7e957;
+  border-radius: 70% 70% 50% 50% / 90% 90% 65% 65%;
+  position: absolute;
+  top: 28%;
+  left: 15%;
+  -webkit-transform: rotateZ(4deg);
+          transform: rotateZ(4deg);
 }
 
 .body {

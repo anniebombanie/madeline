@@ -41,9 +41,9 @@ body {
   width: var(--res-w);
   height: var(--res-h);
   position: relative;
-  background: url("https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg") 53.5% 340% no-repeat;
   background: 0.2;
   background-size: auto 96%;
+  z-index: -20;
 }
 
 .balloon {
@@ -58,19 +58,32 @@ body {
 
 .balloon::after {
   content: '';
-  width: 0;
-  height: 0;
+  width: 2vmax;
+  height: 2vmax;
   display: block;
   position: absolute;
-  background-color: transparent;
-  border-left: 1.5vmin solid transparent;
-  border-right: 1.5vmin solid transparent;
-  border-bottom: 2.5vmin solid #dd2602;
+  background-color: #dd2602;
+  -webkit-clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
   position: absolute;
-  top: 95%;
-  left: 42%;
-  -webkit-transform: rotateZ(3deg);
-          transform: rotateZ(3deg);
+  top: 102%;
+  left: 45%;
+  border-radius: 40%;
+  -webkit-transform: rotate(124deg) skew(-27deg);
+          transform: rotate(124deg) skew(-27deg);
+}
+
+.balloon::before {
+  content: '';
+  width: 0.1vmax;
+  height: 20vmax;
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 100%;
+  left: 51%;
+  -webkit-filter: blur(0.5px);
+          filter: blur(0.5px);
 }
 
 .head {
@@ -79,6 +92,7 @@ body {
   position: relative;
   top: 40%;
   left: 11.5%;
+  border: 1px dashed black;
 }
 
 .head::before, .head::after {
@@ -94,31 +108,47 @@ body {
 
 .head::before {
   border-right: 4vmax solid transparent;
-  top: 1.6vmin;
-  left: 11.2vmin;
+  top: 1.6vmax;
+  left: 7.9vmax;
   -webkit-transform: rotateZ(-8deg);
           transform: rotateZ(-8deg);
 }
 
+@media only screen and (orientation: landscape) {
+  .head::before {
+    order-right: 4vmin solid transparent;
+    top: 1.6vmin;
+    left: 9.2vmin;
+  }
+}
+
 .head::after {
   border-left: 4vmax solid transparent;
-  top: 0.4vmin;
-  left: 16vmin;
+  top: 1vmax;
+  left: 10.4vmax;
   -webkit-transform: rotateZ(-3deg);
           transform: rotateZ(-3deg);
 }
 
+@media only screen and (orientation: landscape) {
+  .head::after {
+    border-left: 4vmin solid transparent;
+    top: 1vmin;
+    left: 13vmin;
+  }
+}
+
 .head__hair {
   width: 80%;
-  height: 50%;
+  height: 47%;
   border-radius: 50%;
   border: 1px dashed black;
   position: absolute;
-  top: 49%;
+  top: 52%;
   left: 12%;
   border-radius: 50% 50% 60% 60% / 90% 90% 35% 35%;
-  -webkit-transform: rotateZ(2deg);
-          transform: rotateZ(2deg);
+  -webkit-transform: rotateZ(2.5deg);
+          transform: rotateZ(2.5deg);
 }
 
 .head__face {
@@ -151,17 +181,11 @@ body {
   left: 71%;
 }
 
-.head__hat {
-  width: 100%;
-  height: 100%;
-  border-left: 13vmax solid transparent;
-  border-right: 13vmax solid transparent;
-  border-top: 18vmax solid #f7e957;
-  border: 1px dashed black;
+body {
+  width: 56%;
+  height: 27%;
   position: absolute;
-  top: 26.5%;
-  left: -4%;
-  border-radius: 50%;
-  -webkit-transform: rotateZ(2deg);
-          transform: rotateZ(2deg);
+  background-color: rgba(1, 1, 82, 0.5);
+  border-radius: 0 0 45% 55% / 0 0 20% 20%;
+  border: 1px dashed yellow;
 }

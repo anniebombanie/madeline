@@ -25,7 +25,7 @@ $y: #f7e957;
 $skin: #efdebd;
 $cloud: #d8b9d7;
 $peach: #e89b9d;
-$red: #dd2602;
+$r: #dd2602;
 $white: #fff;
 $b: #000;
 $t: transparent;
@@ -58,28 +58,35 @@ body {
 .madeline-container {
   @include w-h( var( --res-w ), var( --res-h ));
   position: relative;
-  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   background: 0.2;
   background-size: auto 96%;
+  z-index: -20;
 }
 
 .balloon {
   @include w-h( 49%, 24% );
   position: absolute;
-  background-color: $red;
+  background-color: $r;
   border-radius: 50%;
   top: 0;
   left: 0;
 
   &::after {
-    @include pseduo-div( 0, 0,  $t);
-    border-left: 1.5vmin solid transparent;
-    border-right: 1.5vmin solid transparent;
-    border-bottom: 2.5vmin solid $red;
+    @include pseduo-div( 2vmax, 2vmax,  $r );
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
     position: absolute;
-    top: 95%;
-    left: 42%;
-    transform: rotateZ( 3deg );
+    top: 102%;
+    left: 45%;
+    border-radius: 40%;
+    transform: rotate( 124deg ) skew( -27deg )
+  }
+
+  &::before {
+    @include pseduo-div( 0.1vmax, 20vmax, rgba( $b, 0.7 ));
+    top: 100%;
+    left: 51%;
+    filter: blur( 0.5px );
   }
 }
 
@@ -88,7 +95,7 @@ body {
   position: relative;
   top: 40%;
   left: 11.5%;
-  // border: 1px dashed black;
+  border: 1px dashed black;
 
   // top bow ribbons
   &::before,
@@ -100,32 +107,44 @@ body {
 
   &::before {
     border-right: 4vmax solid $t;
-    top: 1.6vmin;
-    left: 11.2vmin;
+    top: 1.6vmax;
+    left: 7.9vmax;
     transform: rotateZ( -8deg );
+
+    @media only screen and ( orientation: landscape ) {
+      order-right: 4vmin solid $t;
+      top: 1.6vmin;
+      left: 9.2vmin;
+    }
   }
 
   &::after {
     border-left: 4vmax solid $t;
-    top: 0.4vmin;
-    left: 16vmin;
+    top: 1vmax;
+    left: 10.4vmax;
     transform: rotateZ( -3deg );
+
+    @media only screen and ( orientation: landscape ) {
+      border-left: 4vmin solid $t;
+      top: 1vmin;
+      left: 13vmin;
+    }
   }
 
   // hair
   &__hair {
-    @include w-h( 80%, 50% );
+    @include w-h( 80%, 47% );
     border-radius: 50%;
     // background-color: $o;
     border: 1px dashed black;
     position: absolute;
-    top: 49%;
+    top: 52%;
     left: 12%;
     // border-bottom: 13vmax solid $o;
     // border-right: 12vmax solid $t;
     // border-left: 12vmax solid $t;
     border-radius: 50% 50% 60% 60% / 90% 90% 35% 35%;
-    transform: rotateZ( 2deg );
+    transform: rotateZ( 2.5deg );
   }
 
   &__face {
@@ -155,55 +174,56 @@ body {
     }
   }
 
-  &__hat {
-    @include w-h( 100%, 100% );
-    border-left: 13vmax solid $t;
-    border-right: 13vmax solid $t;
-    border-top: 18vmax solid $y;
-    border: 1px dashed black;
-    // @include w-h( 0, 30% );
-    // border-left: 17vmin solid transparent;
-    // border-right: 17vmin solid transparent;
-    // border-top: 13vmin solid $y;
-    position: absolute;
-    top: 26.5%;
-    left: -4%;
-    border-radius: 50%;
-    transform: rotateZ( 2deg );
-  }
+  // &__hat {
+  //   @include w-h( 100%, 100% );
+  //   border-left: 13vmax solid $t;
+  //   border-right: 13vmax solid $t;
+  //   border-top: 18vmax solid $y;
+  //   // border: 1px dashed black;
+  //   // @include w-h( 0, 30% );
+  //   // border-left: 17vmin solid transparent;
+  //   // border-right: 17vmin solid transparent;
+  //   // border-top: 13vmin solid $y;
+  //   position: absolute;
+  //   top: 26.5%;
+  //   left: -4%;
+  //   border-radius: 50%;
+  //   transform: rotateZ( 2deg );
+  // }
 }
 
-//To DO: Make body box bigger
-// &__body {
-//   @include w-h( 56%, 27% );
-//   position: absolute;
-//   background-color: $navy;
-//   // background-color: rgba( $navy, 0.5 );
-//   border-radius: 0 0 45% 55% / 0 0 20% 20%;
-//   rotate: -2deg;
-//   top: 65%;
-//   left: 25%;
+// TO DO: Make body box bigger
+body {
+  @include w-h( 56%, 27% );
+  position: absolute;
+  // background-color: $navy;
+  background-color: rgba( $navy, 0.5 );
+  border-radius: 0 0 45% 55% / 0 0 20% 20%;
+  border: 1px dashed yellow;
+  // rotate: -2deg;
+  // top: 65%;
+  // left: 25%;
 
-//   // legs
-//   &::before,
-//   &::after {
-//     position: absolute;
-//   }
+  // legs
+  // &::before,
+  // &::after {
+  //   position: absolute;
+  // }
 
-//   &::before {
-//     @include pseduo-div( 15%, 37%, $skin );
-//     top: 89%;
-//     left: 8%ś
-//     rotate: 18deg;
-//   }
+  // &::before {
+  //   @include pseduo-div( 15%, 37%, $skin );
+  //   top: 89%;
+  //   left: 8%;
+  //   rotate: 18deg;
+  // }
 
-//   &::after {
-//     @include pseduo-div( 15%, 37%, $skin );
-//     top: 80%;
-//     left: 77%;
-//     rotate: -30deg;
-//   }
-// }
+  // &::after {
+  //   @include pseduo-div( 15%, 37%, $skin );
+  //   top: 80%;
+  //   left: 77%;
+  //   rotate: -30deg;
+  // }
+}
 
 // &__arm {
 //   &--l,

@@ -46,10 +46,10 @@ body {
 .madeline-container {
   @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
-  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   // background: 0.2;
   background-size: auto 96%;
-  border: 1px solid red;
+  // border: 1px solid red;
   z-index: -20;
 }
 
@@ -63,9 +63,9 @@ body {
 
   &::after {
     @include pseduo-div( 2vmin, 2vmin,  $r );
-    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon( 0% 0%, 100% 100%, 0% 100% );
     position: absolute;
-    top: 102%;
+    top: 101%;
     left: 45%;
     border-radius: 40%;
     transform: rotate( 124deg ) skew( -27deg )
@@ -74,8 +74,8 @@ body {
   &::before {
     @include pseduo-div( 0.1vmin, 20vmin, rgba( $b, 0.7 ));
     top: 100%;
-    left: 51%;
-    filter: blur( 0.5px );
+    left: 50.5%;
+    filter: blur( 0.3px );
   }
 }
 
@@ -134,9 +134,9 @@ body {
       radial-gradient( 12% 8% at 58% 60%, $skin 0.5vmin, $t 0.7vmin ),
       radial-gradient( 10% 8% at 59% 63%, rgba( $b, 0.7 ) 0.4vmin, $t 0.6vmin ),
       //mouth
-      linear-gradient( 50deg, $t 48%, $skin 49% ),
-      radial-gradient( 2.2% 1.2% at 53.5% 73.5%, $skin 2vmin, $t 2.2vmin ),
-      radial-gradient( 2% 1.2% at 54% 76%, rgba( $b, 0.7 ) 2vmin, $t 2.2vmin ),
+      linear-gradient( 50deg, $t 49%, $skin 50% ),
+      radial-gradient( 2.4% 1.2% at 53.5% 73.5%, $skin 2vmin, $t 2.2vmin ),
+      radial-gradient( 2.2% 1.2% at 54% 76%, rgba( $b, 0.7 ) 2vmin, $t 2.2vmin ),
       $skin
       ;
     position: absolute;
@@ -146,7 +146,7 @@ body {
     // eyes
     &::before,
     &::after {
-      @include pseduo-div( 5%, 10%, $b );
+      @include pseduo-div( 5%, 10%, rgba( $b, 0.8 ));
       border-radius: 50%;
     }
 
@@ -181,15 +181,17 @@ body {
 
 // TO DO: Make body box bigger
 .body {
-  @include w-h( 56%, 27% );
+  @include w-h( 56%, 24% );
   position: absolute;
   // background-color: $navy;
-  background-color: rgba( $navy, 0.5 );
-  border-radius: 0 0 45% 55% / 0 0 20% 20%;
-  border: 1px dashed yellow;
-  // rotate: -2deg;
-  top: 65%;
+  // background-color: rgba( $navy, 0.5 );
+  border-radius: 0 0 45% 55% / 0 0 18% 18%;
+  rotate: -3deg;
+  top: 67.5%;
   left: 25%;
+  background:
+    linear-gradient( -73deg, $t 33%, $navy 33.5%, $navy 80%, $t 80.5% ),
+    linear-gradient( 74deg, $t 43%, $navy 43.5%, $navy 80%, $t 80.5% ),
 
   // legs
   // &::before,

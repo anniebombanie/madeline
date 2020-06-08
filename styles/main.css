@@ -8,18 +8,6 @@ html {
           box-sizing: inherit;
 }
 
-:root {
-  --res-h: 68vmax;
-  --res-w: 30vmax;
-}
-
-@media only screen and (orientation: landscape) {
-  :root {
-    --res-h: 81.6vmin;
-    --res-w: 36vmin;
-  }
-}
-
 /* --- Colours --- */
 body {
   margin: 0;
@@ -38,8 +26,8 @@ body {
 }
 
 .madeline-container {
-  width: var(--res-w);
-  height: var(--res-h);
+  width: 30vmin;
+  height: 68vmin;
   position: relative;
   background: 0.2;
   background-size: auto 96%;
@@ -58,8 +46,8 @@ body {
 
 .balloon::after {
   content: '';
-  width: 2vmax;
-  height: 2vmax;
+  width: 2vmin;
+  height: 2vmin;
   display: block;
   position: absolute;
   background-color: #dd2602;
@@ -75,8 +63,8 @@ body {
 
 .balloon::before {
   content: '';
-  width: 0.1vmax;
-  height: 20vmax;
+  width: 0.1vmin;
+  height: 20vmin;
   display: block;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
@@ -97,45 +85,29 @@ body {
 
 .head::before, .head::after {
   content: '';
-  width: 3vmax;
-  height: 3vmax;
+  width: 3vmin;
+  height: 3vmin;
   display: block;
   position: absolute;
   background-color: transparent;
   z-index: -10;
-  border-bottom: 5vmax solid #000;
+  border-bottom: 5vmin solid #000;
 }
 
 .head::before {
-  border-right: 4vmax solid transparent;
-  top: 1.6vmax;
-  left: 7.9vmax;
+  border-right: 4vmin solid transparent;
+  top: 1.6vmin;
+  left: 7.9vmin;
   -webkit-transform: rotateZ(-8deg);
           transform: rotateZ(-8deg);
 }
 
-@media only screen and (orientation: landscape) {
-  .head::before {
-    order-right: 4vmin solid transparent;
-    top: 1.6vmin;
-    left: 9.2vmin;
-  }
-}
-
 .head::after {
-  border-left: 4vmax solid transparent;
-  top: 1vmax;
-  left: 10.4vmax;
+  border-left: 4vmin solid transparent;
+  top: 1vmin;
+  left: 10.4vmin;
   -webkit-transform: rotateZ(-3deg);
           transform: rotateZ(-3deg);
-}
-
-@media only screen and (orientation: landscape) {
-  .head::after {
-    border-left: 4vmin solid transparent;
-    top: 1vmin;
-    left: 13vmin;
-  }
 }
 
 .head__hair {
@@ -155,7 +127,7 @@ body {
   width: 44%;
   height: 45%;
   border-radius: 70% 70% 60% 80% / 90% 70% 60% 70%;
-  background: radial-gradient(circle at 60% 60%, green 20vmax);
+  background: radial-gradient(circle at 60% 60%, green 20vmin);
   position: absolute;
   top: 55%;
   left: 33%;

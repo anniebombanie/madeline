@@ -6,18 +6,6 @@ html {
   box-sizing: inherit;
 }
 
-
-:root {
-  --res-h: 68vmax;
-  --res-w: 30vmax;
-
-  // 1.2x
-  @media only screen and ( orientation: landscape ) {
-    --res-h: 81.6vmin;
-    --res-w: 36vmin;
-  }
-}
-
 /* --- Colours --- */
 $navy: #010152;
 $o: #d25317;
@@ -56,7 +44,7 @@ body {
 }
 
 .madeline-container {
-  @include w-h( var( --res-w ), var( --res-h ));
+  @include w-h( 30vmin, 68vmin );
   position: relative;
   // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   background: 0.2;
@@ -73,7 +61,7 @@ body {
   left: 0;
 
   &::after {
-    @include pseduo-div( 2vmax, 2vmax,  $r );
+    @include pseduo-div( 2vmin, 2vmin,  $r );
     clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
     position: absolute;
     top: 102%;
@@ -83,7 +71,7 @@ body {
   }
 
   &::before {
-    @include pseduo-div( 0.1vmax, 20vmax, rgba( $b, 0.7 ));
+    @include pseduo-div( 0.1vmin, 20vmin, rgba( $b, 0.7 ));
     top: 100%;
     left: 51%;
     filter: blur( 0.5px );
@@ -100,35 +88,23 @@ body {
   // top bow ribbons
   &::before,
   &::after {
-    @include pseduo-div( 3vmax, 3vmax, $t );
+    @include pseduo-div( 3vmin, 3vmin, $t );
     z-index: -10;
-    border-bottom: 5vmax solid $b;
+    border-bottom: 5vmin solid $b;
   }
 
   &::before {
-    border-right: 4vmax solid $t;
-    top: 1.6vmax;
-    left: 7.9vmax;
+    border-right: 4vmin solid $t;
+    top: 1.6vmin;
+    left: 7.9vmin;
     transform: rotateZ( -8deg );
-
-    @media only screen and ( orientation: landscape ) {
-      order-right: 4vmin solid $t;
-      top: 1.6vmin;
-      left: 9.2vmin;
-    }
   }
 
   &::after {
-    border-left: 4vmax solid $t;
-    top: 1vmax;
-    left: 10.4vmax;
+    border-left: 4vmin solid $t;
+    top: 1vmin;
+    left: 10.4vmin;
     transform: rotateZ( -3deg );
-
-    @media only screen and ( orientation: landscape ) {
-      border-left: 4vmin solid $t;
-      top: 1vmin;
-      left: 13vmin;
-    }
   }
 
   // hair
@@ -140,9 +116,9 @@ body {
     position: absolute;
     top: 52%;
     left: 12%;
-    // border-bottom: 13vmax solid $o;
-    // border-right: 12vmax solid $t;
-    // border-left: 12vmax solid $t;
+    // border-bottom: 13vmin solid $o;
+    // border-right: 12vmin solid $t;
+    // border-left: 12vmin solid $t;
     border-radius: 50% 50% 60% 60% / 90% 90% 35% 35%;
     transform: rotateZ( 2.5deg );
   }
@@ -151,7 +127,7 @@ body {
     @include w-h( 44%, 45% );
     border-radius: 70% 70% 60% 80% / 90% 70% 60% 70%;
     // box-shadow: 0 2px 0 rgba(255,255,255, 0.8);
-    background: radial-gradient( circle at 60% 60%, green 20vmax );
+    background: radial-gradient( circle at 60% 60%, green 20vmin );
     position: absolute;
     top: 55%;
     left: 33%;
@@ -176,9 +152,9 @@ body {
 
   // &__hat {
   //   @include w-h( 100%, 100% );
-  //   border-left: 13vmax solid $t;
-  //   border-right: 13vmax solid $t;
-  //   border-top: 18vmax solid $y;
+  //   border-left: 13vmin solid $t;
+  //   border-right: 13vmin solid $t;
+  //   border-top: 18vmin solid $y;
   //   // border: 1px dashed black;
   //   // @include w-h( 0, 30% );
   //   // border-left: 17vmin solid transparent;

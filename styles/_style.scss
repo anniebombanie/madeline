@@ -47,10 +47,10 @@ body {
   @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
   background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
-  background: 0.2;
+  // background: 0.2;
   background-size: auto 96%;
   border: 1px solid red;
-  // z-index: -20;
+  z-index: -20;
 }
 
 .balloon {
@@ -125,18 +125,28 @@ body {
   }
 
   &__face {
-    @include w-h( 44%, 45% );
+    @include w-h( 44%, 42% );
+    // background-color: red;
     border-radius: 70% 70% 60% 80% / 90% 70% 60% 70%;
     // box-shadow: 0 2px 0 rgba(255,255,255, 0.8);
-    background: radial-gradient( circle at 60% 60%, green 20vmin );
+    background:
+      // nose
+      radial-gradient( 12% 8% at 58% 60%, $skin 0.5vmin, $t 0.7vmin ),
+      radial-gradient( 10% 8% at 59% 63%, rgba( $b, 0.7 ) 0.4vmin, $t 0.6vmin ),
+      //mouth
+      linear-gradient( 50deg, $t 48%, $skin 49% ),
+      radial-gradient( 2.2% 1.2% at 53.5% 73.5%, $skin 2vmin, $t 2.2vmin ),
+      radial-gradient( 2% 1.2% at 54% 76%, rgba( $b, 0.7 ) 2vmin, $t 2.2vmin ),
+      $skin
+      ;
     position: absolute;
-    top: 55%;
-    left: 33%;
+    top: 57%;
+    left: 33.5%;
 
     // eyes
     &::before,
     &::after {
-      @include pseduo-div( 6%, 9%, $b );
+      @include pseduo-div( 5%, 10%, $b );
       border-radius: 50%;
     }
 
@@ -147,7 +157,7 @@ body {
 
     &::after {
       top: 34%;
-      left: 71%;
+      left: 72%;
     }
   }
 
@@ -178,8 +188,8 @@ body {
   border-radius: 0 0 45% 55% / 0 0 20% 20%;
   border: 1px dashed yellow;
   // rotate: -2deg;
-  // top: 65%;
-  // left: 25%;
+  top: 65%;
+  left: 25%;
 
   // legs
   // &::before,

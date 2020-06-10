@@ -148,9 +148,10 @@ body {
 
   &__face {
     @include w-h( 44%, 42% );
-    border-radius: 70% 70% 60% 80% / 90% 70% 60% 70%;
+    border-radius: 70% 70% 60% 70% / 90% 80% 60% 70%;
     z-index: 0;
     // box-shadow: 0 2px 0 rgba(255,255,255, 0.8);
+    // transform: skew( -1deg );
     background:
       // nose
       radial-gradient( 12% 8% at 58% 60%, $skin 0.5vmin, $t 0.7vmin ),

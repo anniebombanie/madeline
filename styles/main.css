@@ -154,7 +154,7 @@ body {
 .head__face {
   width: 44%;
   height: 42%;
-  border-radius: 70% 70% 60% 80% / 90% 70% 60% 70%;
+  border-radius: 70% 70% 60% 70% / 90% 80% 60% 70%;
   z-index: 0;
   background: radial-gradient(12% 8% at 58% 60%, #efdebd 0.5vmin, transparent 0.7vmin), radial-gradient(10% 8% at 59% 63%, rgba(0, 0, 0, 0.7) 0.4vmin, transparent 0.6vmin), linear-gradient(50deg, transparent 49%, #efdebd 50%), radial-gradient(2.4% 1.2% at 53.5% 73.5%, #efdebd 2vmin, transparent 2.2vmin), radial-gradient(2.2% 1.2% at 54% 76%, rgba(0, 0, 0, 0.7) 2vmin, transparent 2.2vmin), #efdebd;
   position: absolute;

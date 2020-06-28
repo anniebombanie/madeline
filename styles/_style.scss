@@ -46,7 +46,7 @@ body {
 .madeline-container {
   @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
-  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   // background: 0.2;
   background-size: auto 96%;
   // border: 1px solid red;
@@ -233,37 +233,47 @@ body {
   // legs
   &__leg-l,
   &__leg-r {
-    @include pseduo-div( 13%, 28%, null );
-    position: absolute;
-    // opacity: 0.5;
-    background: linear-gradient( $skin 52%, $white 52.5% );
+    // Leg
+    &::after {
+      @include pseduo-div( 13%, 28%, null );
+      position: absolute;
+      // opacity: 0.5;
+      background: linear-gradient( $skin 52%, $white 52.5% );
+    }
 
+    // Shoe
     &::before {
-      @include pseduo-div( 130%, 25%, $navy );
-      top: 96%;
-      z-index: -10;
+      @include pseduo-div( 20%, 7%, $b );
+      border-radius: 50%;
     }
   }
 
   &__leg-l {
-    top: 69%;
-    left: 12.8%;
-    border-radius: 0 0 50% 50% / 0 0 5% 8%;
-    rotate: 18deg;
+    &::after {
+      top: 69%;
+      left: 12.8%;
+      border-radius: 0 0 50% 50% / 0 0 5% 8%;
+      rotate: 18deg;
+    }
 
-    &::before{
-      left: -28%;
+    &::before {
+      top: 93%;
+      left: 0%;
     }
   }
 
   &__leg-r {
-    top: 68%;
-    left: 72%;
-    border-radius: 0 0 50% 50% / 0 0 10% 5%;
-    rotate: -33deg;
+    &::after {
+      top: 68%;
+      left: 72%;
+      border-radius: 0 0 50% 50% / 0 0 10% 5%;
+      rotate: -33deg;
+    }
 
-    &::before{
-      left: 0%;
+    &::before {
+      top: 89%;
+      right: -1%;
+      transform: rotate( -15deg );
     }
   }
 }

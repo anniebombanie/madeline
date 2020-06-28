@@ -72,7 +72,7 @@ body {
   }
 
   &::before {
-    @include pseduo-div( 0.1vmin, 20vmin, rgba( $b, 0.7 ));
+    @include pseduo-div( 0.1vmin, 25vmin, rgba( $b, 0.7 ));
     top: 100%;
     left: 50.5%;
     filter: blur( 0.3px );
@@ -233,20 +233,38 @@ body {
   // legs
   &__leg-l,
   &__leg-r {
+    @include pseduo-div( 13%, 28%, null );
     position: absolute;
-    @include pseduo-div( 14%, 28%, $skin );
+    // opacity: 0.5;
+    background: linear-gradient( $skin 52%, $white 52.5% );
+
+    &::before {
+      @include pseduo-div( 130%, 25%, $navy );
+      top: 96%;
+      z-index: -10;
+    }
   }
 
   &__leg-l {
-    top: 68%;
-    left: 12%;
+    top: 69%;
+    left: 12.8%;
+    border-radius: 0 0 50% 50% / 0 0 5% 8%;
     rotate: 18deg;
+
+    &::before{
+      left: -28%;
+    }
   }
 
   &__leg-r {
-    top: 67%;
-    left: 71.7%;
+    top: 68%;
+    left: 72%;
+    border-radius: 0 0 50% 50% / 0 0 10% 5%;
     rotate: -33deg;
+
+    &::before{
+      left: 0%;
+    }
   }
 }
 

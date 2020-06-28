@@ -64,7 +64,7 @@ body {
 .balloon::before {
   content: '';
   width: 0.1vmin;
-  height: 20vmin;
+  height: 25vmin;
   display: block;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
@@ -230,23 +230,45 @@ body {
 }
 
 .body__leg-l, .body__leg-r {
-  position: absolute;
   content: '';
-  width: 14%;
+  width: 13%;
   height: 28%;
   display: block;
   position: absolute;
-  background-color: #efdebd;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(52%, #efdebd), color-stop(52.5%, #fff));
+  background: linear-gradient(#efdebd 52%, #fff 52.5%);
+}
+
+.body__leg-l::before, .body__leg-r::before {
+  content: '';
+  width: 130%;
+  height: 25%;
+  display: block;
+  position: absolute;
+  background-color: #010152;
+  top: 96%;
+  z-index: -10;
 }
 
 .body__leg-l {
-  top: 68%;
-  left: 12%;
+  top: 69%;
+  left: 12.8%;
+  border-radius: 0 0 50% 50% / 0 0 5% 8%;
   rotate: 18deg;
 }
 
+.body__leg-l::before {
+  left: -28%;
+}
+
 .body__leg-r {
-  top: 67%;
-  left: 71.7%;
+  top: 68%;
+  left: 72%;
+  border-radius: 0 0 50% 50% / 0 0 10% 5%;
   rotate: -33deg;
+}
+
+.body__leg-r::before {
+  left: 0%;
 }

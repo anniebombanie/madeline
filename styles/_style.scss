@@ -46,7 +46,7 @@ body {
 .madeline-container {
   @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
-  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   // background: 0.2;
   background-size: auto 96%;
   // border: 1px solid red;
@@ -84,7 +84,7 @@ body {
   position: relative;
   top: 40%;
   left: 11.5%;
-  border: 1px dashed black;
+  // border: 1px dashed black;
 
   // top bow ribbons
   &::before,
@@ -112,7 +112,7 @@ body {
   &__hair,
   &__hair--fringe {
     @include w-h( 80%, 47% );
-    border: 1px dashed green;
+    // border: 1px dashed green;
     position: absolute;
     top: 52%;
     left: 12%;
@@ -201,37 +201,54 @@ body {
 
 // TO DO: Make body box bigger
 .body {
-  @include w-h( 56%, 24% );
+  border: 1px dashed green;
+  @include w-h( 66%, 34.4% );
   position: absolute;
-  // background-color: $navy;
-  // background-color: rgba( $navy, 0.5 );
-  border-radius: 0 0 45% 55% / 0 0 18% 18%;
-  rotate: -3deg;
-  top: 67.5%;
-  left: 25%;
-  background:
-    linear-gradient( -73deg, $t 33%, $navy 33.5%, $navy 80%, $t 80.5% ),
-    linear-gradient( 74deg, $t 43%, $navy 43.5%, $navy 80%, $t 80.5% ),
+  top: 65.6%;
+  left: 23.5%;
+
+  // dress
+  &::before {
+    @include pseduo-div( 84%, 66%, $navy );
+    // background-color: $navy;
+    // background-color: rgba( $navy, 0.5 );
+    // border-radius: 0 0 45% 55% / 0 0 18% 18%;
+    border-radius: 50% / 100% 100% 0% 0%;
+    rotate: -3deg;
+    top: 0;
+    left: 3%;
+    background:
+      linear-gradient( -73deg, $t 35%, $navy 35.5%,$navy 77%, $t 77.5% ),
+      linear-gradient( 74deg, $t 42%, $navy 42.5%, $navy 78%, $t 78.5% );
+  }
+
+  &::after {
+    @include pseduo-div( 82.3%, 18%, $navy );
+    border-radius: 50%;
+    top: 56.6%;
+    left: 5.78%;
+    transform: rotate( -3deg );
+  }
 
   // legs
-  // &::before,
-  // &::after {
-  //   position: absolute;
-  // }
+  &__leg-l,
+  &__leg-r {
+    position: absolute;
+  }
 
-  // &::before {
-  //   @include pseduo-div( 15%, 37%, $skin );
-  //   top: 89%;
-  //   left: 8%;
-  //   rotate: 18deg;
-  // }
+  &__leg-l {
+    @include pseduo-div( 15%, 37%, $skin );
+    top: 89%;
+    left: 8%;
+    rotate: 18deg;
+  }
 
-  // &::after {
-  //   @include pseduo-div( 15%, 37%, $skin );
-  //   top: 80%;
-  //   left: 77%;
-  //   rotate: -30deg;
-  // }
+  &__leg-r {
+    @include pseduo-div( 15%, 37%, $skin );
+    top: 80%;
+    left: 77%;
+    rotate: -30deg;
+  }
 }
 
 // &__arm {

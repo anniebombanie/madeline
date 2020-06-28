@@ -46,7 +46,7 @@ body {
 .madeline-container {
   @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
-  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   // background: 0.2;
   background-size: auto 96%;
   // border: 1px solid red;
@@ -218,14 +218,14 @@ body {
     top: 0;
     left: 3%;
     background:
-      linear-gradient( -73deg, $t 35%, $navy 35.5%,$navy 77%, $t 77.5% ),
+      linear-gradient( -72.8deg, $t 35%, $navy 35.5%,$navy 77%, $t 77.5% ),
       linear-gradient( 74deg, $t 42%, $navy 42.5%, $navy 78%, $t 78.5% );
   }
 
   &::after {
     @include pseduo-div( 82.3%, 18%, $navy );
     border-radius: 50%;
-    top: 56.6%;
+    top: 56.7%;
     left: 5.78%;
     transform: rotate( -3deg );
   }
@@ -234,20 +234,19 @@ body {
   &__leg-l,
   &__leg-r {
     position: absolute;
+    @include pseduo-div( 14%, 28%, $skin );
   }
 
   &__leg-l {
-    @include pseduo-div( 15%, 37%, $skin );
-    top: 89%;
-    left: 8%;
+    top: 68%;
+    left: 12%;
     rotate: 18deg;
   }
 
   &__leg-r {
-    @include pseduo-div( 15%, 37%, $skin );
-    top: 80%;
-    left: 77%;
-    rotate: -30deg;
+    top: 67%;
+    left: 71.7%;
+    rotate: -33deg;
   }
 }
 

@@ -193,7 +193,6 @@ body {
 }
 
 .body {
-  border: 1px dashed green;
   width: 66%;
   height: 34.4%;
   position: absolute;
@@ -271,41 +270,43 @@ body {
 }
 
 .arm__l, .arm__r {
-  width: 45%;
-  height: 10%;
+  width: 46%;
+  height: 15%;
   position: absolute;
-  border: 1px solid red;
 }
 
 .arm__l::after, .arm__r::after {
   content: '';
   width: 75%;
-  height: 40%;
+  height: 100%;
   display: block;
   position: absolute;
-  border: 1px dashed green;
+  border: 1px solid yellow;
+  -webkit-clip-path: polygon(0 0, 15% 100%, 100% 15%);
+          clip-path: polygon(0 0, 15% 100%, 100% 15%);
+  background: radial-gradient(2% 3% at 15% 10%, #fff 2vmin, transparent 2.1vmin), radial-gradient(6% 5% at 0% 0%, #010152 11.5vmin, transparent 11.6vmin);
 }
 
-.arm__l {
+.arm__r {
   rotate: 2deg;
-  top: 65.5%;
-  left: 55%;
+  top: 65%;
+  left: 54%;
 }
 
-.arm__l::before {
+.arm__r::before {
   content: '';
   width: 75%;
-  height: 40%;
+  height: 25%;
   display: block;
   position: absolute;
   border: 1px dashed green;
-  top: 18%;
+  top: 15%;
   right: -12%;
   -webkit-transform: perspective(20vmin) rotateY(35deg);
           transform: perspective(20vmin) rotateY(35deg);
 }
 
-.arm__r {
+.arm__l {
   top: 65.5%;
   left: 0;
   rotate: 5deg;

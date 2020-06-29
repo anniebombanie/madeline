@@ -200,7 +200,7 @@ body {
 }
 
 .body {
-  border: 1px dashed green;
+  // border: 1px dashed green;
   @include w-h( 66%, 34.4% );
   position: absolute;
   top: 65.6%;
@@ -280,36 +280,40 @@ body {
 .arm {
   &__l,
   &__r {
-    @include w-h( 45%, 10% );
+    @include w-h( 46%, 15% );
     position: absolute;
-    border: 1px solid red;
+    // border: 1px solid red;
     // background-color: $skin;
     // background-color: rgba( $skin, 0.5 );
 
     &::after {
-      @include pseduo-div( 75%, 40%, null );
-      border: 1px dashed green;
+      @include pseduo-div( 75%, 100%, null );
+      border: 1px solid yellow;
+      clip-path: polygon( 0 0, 15% 100%, 100% 15% );
+      background:
+        radial-gradient( 2% 3% at 15% 10%, $white 2vmin, $t 2.1vmin ),
+        radial-gradient( 6% 5% at 0% 0%, $navy 11.5vmin, $t 11.6vmin );
     }
   }
 
-  &__l {
+  &__r {
     // @include w-h( 8%, 10% );
     // top: 54%;
     // left: 26%;
     rotate: 2deg;
-    top: 65.5%;
-    left: 55%;
+    top: 65%;
+    left: 54%;
 
     &::before {
-      @include pseduo-div( 75%, 40%, null );
+      @include pseduo-div( 75%, 25%, null );
       border: 1px dashed green;
-      top: 18%;
+      top: 15%;
       right: -12%;
       transform: perspective( 20vmin ) rotateY( 35deg );
     }
   }
 
-  &__r {
+  &__l {
     top: 65.5%;
     left: 0;
     rotate: 5deg;

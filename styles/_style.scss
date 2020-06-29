@@ -282,24 +282,36 @@ body {
   &__r {
     @include w-h( 45%, 10% );
     position: absolute;
-    top: 65.5%;
-    left: 55%;
     border: 1px solid red;
     // background-color: $skin;
     // background-color: rgba( $skin, 0.5 );
+
+    &::after {
+      @include pseduo-div( 75%, 40%, null );
+      border: 1px dashed green;
+    }
   }
 
-  // &__l {
-  //   @include w-h( 8%, 10% );
-  //   top: 54%;
-  //   left: 26%;
-  //   rotate: -28deg;
-  // }
+  &__l {
+    // @include w-h( 8%, 10% );
+    // top: 54%;
+    // left: 26%;
+    rotate: 2deg;
+    top: 65.5%;
+    left: 55%;
 
-  // &__r {
-  //   @include w-h( 13%, 4% );
-  //   top: 67.5%;
-  //   left: 77%;
-  //   rotate: 5deg;
-  // }
+    &::before {
+      @include pseduo-div( 75%, 40%, null );
+      border: 1px dashed green;
+      top: 18%;
+      right: -12%;
+      transform: perspective( 20vmin ) rotateY( 35deg );
+    }
+  }
+
+  &__r {
+    top: 65.5%;
+    left: 0;
+    rotate: 5deg;
+  }
 }

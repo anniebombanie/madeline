@@ -274,7 +274,39 @@ body {
   width: 45%;
   height: 10%;
   position: absolute;
+  border: 1px solid red;
+}
+
+.arm__l::after, .arm__r::after {
+  content: '';
+  width: 75%;
+  height: 40%;
+  display: block;
+  position: absolute;
+  border: 1px dashed green;
+}
+
+.arm__l {
+  rotate: 2deg;
   top: 65.5%;
   left: 55%;
-  border: 1px solid red;
+}
+
+.arm__l::before {
+  content: '';
+  width: 75%;
+  height: 40%;
+  display: block;
+  position: absolute;
+  border: 1px dashed green;
+  top: 18%;
+  right: -12%;
+  -webkit-transform: perspective(20vmin) rotateY(35deg);
+          transform: perspective(20vmin) rotateY(35deg);
+}
+
+.arm__r {
+  top: 65.5%;
+  left: 0;
+  rotate: 5deg;
 }

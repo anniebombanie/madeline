@@ -46,7 +46,7 @@ body {
 .madeline-container {
   @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
-  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   // background: 0.2;
   background-size: auto 96%;
   // border: 1px solid red;
@@ -199,7 +199,6 @@ body {
   }
 }
 
-// TO DO: Make body box bigger
 .body {
   border: 1px dashed green;
   @include w-h( 66%, 34.4% );
@@ -209,7 +208,7 @@ body {
 
   // dress
   &::before {
-    @include pseduo-div( 84%, 66%, $navy );
+    // @include pseduo-div( 84%, 66%, $navy );
     // background-color: $navy;
     // background-color: rgba( $navy, 0.5 );
     // border-radius: 0 0 45% 55% / 0 0 18% 18%;
@@ -279,24 +278,28 @@ body {
 }
 
 .arm {
-  &--l,
-  &--r {
-    background-color: $skin;
-    // background-color: rgba( $skin, 0.5 );
+  &__l,
+  &__r {
+    @include w-h( 45%, 10% );
     position: absolute;
+    top: 65.5%;
+    left: 55%;
+    border: 1px solid red;
+    // background-color: $skin;
+    // background-color: rgba( $skin, 0.5 );
   }
 
-  &--l {
-    @include w-h( 8%, 10% );
-    top: 54%;
-    left: 26%;
-    rotate: -28deg;
-  }
+  // &__l {
+  //   @include w-h( 8%, 10% );
+  //   top: 54%;
+  //   left: 26%;
+  //   rotate: -28deg;
+  // }
 
-  &--r {
-    @include w-h( 13%, 4% );
-    top: 67.5%;
-    left: 77%;
-    rotate: 5deg;
-  }
+  // &__r {
+  //   @include w-h( 13%, 4% );
+  //   top: 67.5%;
+  //   left: 77%;
+  //   rotate: 5deg;
+  // }
 }

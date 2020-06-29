@@ -29,6 +29,7 @@ body {
   width: 40.5vmin;
   height: 91.8vmin;
   position: relative;
+  background: url("https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg") 53.5% 340% no-repeat;
   background-size: auto 96%;
   z-index: -20;
 }
@@ -201,12 +202,6 @@ body {
 }
 
 .body::before {
-  content: '';
-  width: 84%;
-  height: 66%;
-  display: block;
-  position: absolute;
-  background-color: #010152;
   border-radius: 50% / 100% 100% 0% 0%;
   rotate: -3deg;
   top: 0;
@@ -275,23 +270,11 @@ body {
           transform: rotate(-15deg);
 }
 
-.arm--l, .arm--r {
-  background-color: #efdebd;
-  position: absolute;
-}
-
-.arm--l {
-  width: 8%;
+.arm__l, .arm__r {
+  width: 45%;
   height: 10%;
-  top: 54%;
-  left: 26%;
-  rotate: -28deg;
-}
-
-.arm--r {
-  width: 13%;
-  height: 4%;
-  top: 67.5%;
-  left: 77%;
-  rotate: 5deg;
+  position: absolute;
+  top: 65.5%;
+  left: 55%;
+  border: 1px solid red;
 }

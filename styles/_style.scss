@@ -69,20 +69,23 @@ body {
 
     &:nth-child( 2 ) {
       @include w-h ( 50vmin, 30vmin );
-      border: 1px dotted green;
+      // border: 1px dotted green;
       position: absolute;
       top: 20%;
       left: 65%;
       opacity: 0.7;
       background:
-        radial-gradient( 1vmin 1vmin at 33% 49%, $w 6.5vmin, $t 6.9vmin ),
-        radial-gradient( 2vmin 1.2vmin at 59% 30%, $w 6.5vmin, $t 7vmin ),
-        radial-gradient( 1vmin 1vmin at 80% 55%, $w 6vmin, $t 6.5vmin ),
-        radial-gradient( 2vmin 1.5vmin at 70% 76%, $w 4vmin, $t 4.5vmin ),
-        radial-gradient( 2vmin 1.5vmin at 55% 80%,$w 5.5vmin, $t 6vmin ),
-        radial-gradient( 2vmin 1.1vmin at 35% 80%, $w 7.5vmin, $t 8vmin ),
-        radial-gradient( 2vmin 1.5vmin at 20% 75%,$w 4.5vmin, $t 4.9vmin ),
-        radial-gradient( 2vmin 1vmin at 45% 55%, $w 20.5vmin, $t 21vmin );
+        radial-gradient( 1vmin 1vmin at 21% 53%, $w 6.6vmin, $t 7vmin ),
+        radial-gradient( 1vmin 1vmin at 38% 42%, $w 8vmin, $t 8.4vmin ),
+        radial-gradient( 1vmin 1vmin at 59% 40%, $w 8.5vmin, $t 8.9vmin ),
+        radial-gradient( 1vmin 1vmin at 76% 34%, $w 2.5vmin, $t 2.9vmin ),
+        radial-gradient( 1vmin 1vmin at 82% 55%, $w 6vmin, $t 6.5vmin ),
+        radial-gradient( 2vmin 1.5vmin at 88% 66%, $w 5.5vmin, $t 6vmin ),
+        radial-gradient( 2vmin 1.5vmin at 74% 76%, $w 4vmin, $t 4.5vmin ),
+        radial-gradient( 2vmin 1.5vmin at 59% 80%,$w 5.5vmin, $t 6vmin ),
+        radial-gradient( 2vmin 1.1vmin at 39% 80%, $w 7.5vmin, $t 8vmin ),
+        radial-gradient( 2vmin 1.5vmin at 16% 70%,$w 7.5vmin, $t 7.9vmin ),
+        radial-gradient( 2vmin 1vmin at 42% 56%, $w 17vmin, $t 17.4vmin );
     }
 
   }

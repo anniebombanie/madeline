@@ -62,15 +62,13 @@ body {
 
 .balloon::before {
   content: '';
-  width: 0.1vmin;
+  width: 0.2vmin;
   height: 26vmin;
   display: block;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.3);
   top: 100%;
   left: 50.5%;
-  -webkit-filter: blur(0.2px);
-          filter: blur(0.2px);
 }
 
 .head {
@@ -291,7 +289,7 @@ body {
   width: 50%;
   height: 15%;
   top: 56%;
-  left: 1%;
+  left: 1.1%;
   rotate: 46deg;
 }
 
@@ -317,11 +315,11 @@ body {
   display: block;
   position: absolute;
   background-color: yellow;
-  background: radial-gradient(1% 2% at 87% 6%, #fff 2.6vmin, transparent 2.7vmin), radial-gradient(1% 2% at 90% 5%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(circle at 89% 18%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(5% 8% at 108% -50%, #010152 15.5vmin, transparent 15.6vmin);
+  background: radial-gradient(1% 2% at 87% 6%, #fff 2.6vmin, transparent 2.7vmin), radial-gradient(1% 2% at 90% 5%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(circle at 89% 16%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(5% 8% at 108% -50%, #010152 15.5vmin, transparent 15.6vmin);
 }
 
 .arm__r {
-  width: 46%;
+  width: 48%;
   height: 15%;
   rotate: 2deg;
   top: 65%;
@@ -338,7 +336,7 @@ body {
   right: -12%;
   -webkit-transform: perspective(20vmin) rotateY(35deg);
           transform: perspective(20vmin) rotateY(35deg);
-  background: radial-gradient(2% 3% at 90% 10%, #fff 1vmin, transparent 1.1vmin), radial-gradient(2% 3% at 92% 30%, #fff 1vmin, transparent 1.1vmin), radial-gradient(2% 3% at 92% 50%, #fff 1vmin, transparent 1.1vmin), radial-gradient(2% 3% at 92% 70%, #fff 1vmin, transparent 1.1vmin), radial-gradient(2% 3% at 92% 90%, #fff 1vmin, transparent 1.1vmin), radial-gradient(circle at 0% 0%, #efdebd 8.2vmin, transparent 8.3vmin), radial-gradient(circle at 0% 0%, #fff 12.5vmin, transparent 12.6vmin);
+  background: radial-gradient(2% 3% at 89% 10%, #fff 1vmin, transparent 1.1vmin), radial-gradient(2% 3% at 88% 30%, #fff 1vmin, transparent 1.1vmin), radial-gradient(2% 3% at 87% 50%, #fff 1vmin, transparent 1.1vmin), radial-gradient(2% 3% at 86% 70%, #fff 1vmin, transparent 1.1vmin), radial-gradient(2% 3% at 85% 90%, #fff 1vmin, transparent 1.1vmin), radial-gradient(circle at 0% 0%, #efdebd 8.2vmin, transparent 8.3vmin), radial-gradient(circle at 0% 0%, #fff 12.5vmin, transparent 12.6vmin);
 }
 
 .arm__r::after {
@@ -347,7 +345,7 @@ body {
   height: 100%;
   display: block;
   position: absolute;
-  -webkit-clip-path: polygon(0 0, 15% 100%, 100% 15%);
-          clip-path: polygon(0 0, 15% 100%, 100% 15%);
-  background: radial-gradient(2.5% 3% at 15% 5%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(2.5% 3% at 18% 12%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(6% 5% at 0% 0%, #010152 11.5vmin, transparent 11.6vmin);
+  -webkit-clip-path: polygon(0 0, 10% 100%, 100% 15%);
+          clip-path: polygon(0 0, 10% 100%, 100% 15%);
+  background: radial-gradient(2.5% 3% at 15% 5%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(2.5% 3% at 17% 12%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(2.5% 3% at 18% 12%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(6% 5% at 0% 0%, #010152 12.5vmin, transparent 12.6vmin);
 }

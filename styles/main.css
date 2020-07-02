@@ -61,7 +61,7 @@ body {
   left: 63%;
   opacity: 0.5;
   border: 1px dotted green;
-  background: radial-gradient(1vmin 1vmin at 16% 53%, #fff 4vmin, transparent 4.4vmin), radial-gradient(0.8vmin 1vmin at 33% 51%, #fff 6vmin, transparent 6.4vmin), radial-gradient(1.5vmin 1vmin at 57% 30%, #fff 7vmin, transparent 7.5vmin), radial-gradient(1.2vmin 1vmin at 79% 36%, #fff 3vmin, transparent 3.4vmin), radial-gradient(2vmin 1.5vmin at 78% 72%, #fff 4vmin, transparent 4.5vmin), radial-gradient(2vmin 1.5vmin at 55% 72%, #fff 5.5vmin, transparent 6vmin), radial-gradient(2vmin 1.5vmin at 35% 80%, #fff 2.5vmin, transparent 3vmin), radial-gradient(2vmin 1.5vmin at 16% 70%, #fff 4.5vmin, transparent 5vmin), radial-gradient(2vmin 0.9vmin at 50% 55%, #fff 14.5vmin, transparent 15vmin);
+  background: radial-gradient(0.8vmin 1vmin at 33% 50%, #fff 4vmin, transparent 4.4vmin), radial-gradient(1.5vmin 1vmin at 57% 35%, #fff 6vmin, transparent 6.5vmin), radial-gradient(1.2vmin 1vmin at 79% 41%, #fff 3vmin, transparent 3.4vmin), radial-gradient(2vmin 1.5vmin at 78% 65%, #fff 4vmin, transparent 4.5vmin), radial-gradient(2vmin 1.5vmin at 55% 66%, #fff 5.5vmin, transparent 6vmin), radial-gradient(2vmin 1.5vmin at 30% 80%, #fff 2.5vmin, transparent 3vmin), radial-gradient(2vmin 1.5vmin at 17% 72%, #fff 1.6vmin, transparent 2vmin), radial-gradient(2vmin 0.9vmin at 50% 55%, #fff 10vmin, transparent 10.5vmin);
 }
 
 .madeline-container {

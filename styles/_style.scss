@@ -59,7 +59,7 @@ body {
   background-color: $r;
   border-radius: 50%;
   top: 0;
-  left: 0;
+  left: -4%;
 
   &::after {
     @include pseduo-div( 2vmin, 2vmin,  $r );
@@ -72,10 +72,10 @@ body {
   }
 
   &::before {
-    @include pseduo-div( 0.1vmin, 25vmin, rgba( $b, 0.7 ));
+    @include pseduo-div( 0.1vmin, 26vmin, rgba( $b, 0.9 ));
     top: 100%;
     left: 50.5%;
-    filter: blur( 0.3px );
+    filter: blur( 0.2px );
   }
 }
 
@@ -114,7 +114,7 @@ body {
     @include w-h( 80%, 47% );
     // border: 1px dashed green;
     position: absolute;
-    top: 51%;
+    top: 52.5%;
     left: 12%;
     border-radius: 50% 50% 60% 60% / 90% 90% 35% 35%;
     transform: rotateZ( 2.5deg );
@@ -201,7 +201,7 @@ body {
 }
 
 .body {
-  border: 1px dashed green;
+  // border: 1px dashed green;
   @include w-h( 66%, 34.4% );
   position: absolute;
   top: 65.6%;
@@ -293,7 +293,7 @@ body {
     @include w-h( 50%, 15% );
     top: 57%;
     // top: 70%;
-    left: 3%;
+    left: 2%;
     rotate: 40deg;
 
     &::before {
@@ -309,17 +309,17 @@ body {
         radial-gradient( 2% 3% at 82% 50%, $white 1vmin, $t 1.1vmin ),
         radial-gradient( 2% 3% at 81% 70%, $white 1vmin, $t 1.1vmin ),
         radial-gradient( 2% 3% at 80% 90%, $white 1vmin, $t 1.1vmin ),
-        radial-gradient( circle at 0% 0%, $t 3vmin, $skin 3vmin, $skin 8.2vmin, $t 8.3vmin ),
+        radial-gradient( circle at 0% 0%, $t 3vmin, $skin 3vmin, $skin 7.7vmin, $t 7.8vmin ),
         radial-gradient( circle at 0% 0%, $t 3vmin, $white 3vmin, $white 12.5vmin, $t 12.6vmin );
     }
 
     &::after {
       @include pseduo-div( 100%, 100%, yellow );
       background:
-        radial-gradient( 1% 2% at 87% 5%, $white 2.2vmin, $t 2.3vmin ),
-        radial-gradient( 1% 2% at 90% 0%, $white 2.2vmin, $t 2.3vmin ),
-        radial-gradient( circle at 89% 12%, $white 2.2vmin, $t 2.3vmin ),
-        radial-gradient( 5% 8% at 105% -50%, $navy 15.5vmin, $t 15.6vmin );
+        radial-gradient( 1% 2% at 87% 6%, $white 2.6vmin, $t 2.7vmin ),
+        radial-gradient( 1% 2% at 90% 5%, $white 2.2vmin, $t 2.3vmin ),
+        radial-gradient( circle at 89% 18%, $white 2.2vmin, $t 2.3vmin ),
+        radial-gradient( 5% 8% at 106% -50%, $navy 15.5vmin, $t 15.6vmin );
     }
   }
 

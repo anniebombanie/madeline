@@ -11,7 +11,8 @@ $n: #010152;
 $o: #d25317;
 $y: #f7e957;
 $skin: #efdebd;
-$cloud: #d8b9d7;
+$pr: #d8b9d7;
+$pk: #ffc0cb;
 $peach: #e89b9d;
 $r: #dd2602;
 $w: #fff;
@@ -34,8 +35,7 @@ $t: transparent;
 
 body {
   margin: 0;
-  background: $cloud;
-  background: linear-gradient( $cloud 60%, pink );
+  background: linear-gradient( $pr 60%, $pk );
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -52,10 +52,9 @@ body {
     &:nth-child( 1 ) {
       @include w-h ( 36vmin, 25vmin );
       position: absolute;
-      top: 40%;
+      top: 35%;
       left: 3%;
       opacity: 0.6;
-      // border: 1px dotted green;
       background:
         radial-gradient( 1vmin 1vmin at 16% 53%, $w 4vmin, $t 4.4vmin ),
         radial-gradient( 0.8vmin 1vmin at 33% 51%, $w 6vmin, $t 6.4vmin ),
@@ -93,12 +92,10 @@ body {
     &:nth-child( 3 ) {
       @include w-h ( 25vmin, 15vmin );
       position: absolute;
-      top: 68%;
+      top: 65%;
       left: 63%;
       opacity: 0.5;
-      border: 1px dotted green;
       background:
-        // radial-gradient( 1vmin 1vmin at 16% 53%, $w 4vmin, $t 4.4vmin ),
         radial-gradient( 0.8vmin 1vmin at 33% 50%, $w 4vmin, $t 4.4vmin ),
         radial-gradient( 1.5vmin 1vmin at 57% 35%, $w 6vmin, $t 6.5vmin ),
         radial-gradient( 1.2vmin 1vmin at 79% 41%, $w 3vmin, $t 3.4vmin ),
@@ -107,6 +104,23 @@ body {
         radial-gradient( 2vmin 1.5vmin at 30% 80%, $w 2.5vmin, $t 3vmin ),
         radial-gradient( 2vmin 1.5vmin at 17% 72%, $w 1.6vmin, $t 2vmin ),
         radial-gradient( 2vmin 0.9vmin at 50% 55%, $w 10vmin, $t 10.5vmin );
+      // transform: translateY( -20vmin );
+    }
+
+    &:nth-child( 4 ) {
+      @include w-h ( 12vmin, 8vmin );
+      position: absolute;
+      top: 90%;
+      left: 25%;
+      opacity: 0.4;
+      background:
+        radial-gradient( 1.2vmin 1vmin at 44% 35%, $w 2vmin, $t 2.4vmin ),
+        radial-gradient( 1.5vmin 1vmin at 66% 30%, $w 1vmin, $t 1.4vmin ),
+        radial-gradient( 2vmin 1.5vmin at 78% 75%, $w 1vmin, $t 1.5vmin ),
+        radial-gradient( 2vmin 1.5vmin at 55% 66%, $w 2.5vmin, $t 3vmin ),
+        radial-gradient( 2vmin 1.5vmin at 35% 80%, $w 1vmin, $t 1.4vmin ),
+        radial-gradient( 2vmin 1.5vmin at 17% 72%, $w 1.6vmin, $t 2vmin ),
+        radial-gradient( 2vmin 0.8vmin at 50% 55%, $w 5vmin, $t 5.5vmin );
       // transform: translateY( -20vmin );
     }
   }

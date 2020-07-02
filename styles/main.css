@@ -34,23 +34,23 @@ body {
 }
 
 .cloud div:nth-child(1) {
-  width: 30vmin;
-  height: 20vmin;
+  width: 36vmin;
+  height: 25vmin;
   position: absolute;
   top: 48%;
-  left: 15%;
-  opacity: 0.7;
-  background: radial-gradient(1vmin 1vmin at 33% 49%, #fff 6.5vmin, transparent 6.9vmin), radial-gradient(2vmin 1.2vmin at 59% 30%, #fff 6.5vmin, transparent 7vmin), radial-gradient(1vmin 1vmin at 83% 35%, #fff 2vmin, transparent 2.3vmin), radial-gradient(2vmin 1.5vmin at 78% 72%, #fff 4vmin, transparent 4.5vmin), radial-gradient(2vmin 1.5vmin at 55% 72%, #fff 5.5vmin, transparent 6vmin), radial-gradient(2vmin 1.5vmin at 35% 82%, #fff 2.5vmin, transparent 3vmin), radial-gradient(2vmin 1.5vmin at 20% 72%, #fff 4.5vmin, transparent 5vmin), radial-gradient(2vmin 0.9vmin at 50% 55%, #fff 14.5vmin, transparent 15vmin);
+  left: 3%;
+  opacity: 0.6;
+  background: radial-gradient(1vmin 1vmin at 16% 53%, #fff 4vmin, transparent 4.4vmin), radial-gradient(0.8vmin 1vmin at 33% 51%, #fff 6vmin, transparent 6.4vmin), radial-gradient(1.5vmin 1vmin at 57% 30%, #fff 7vmin, transparent 7.5vmin), radial-gradient(1.2vmin 1vmin at 79% 36%, #fff 3vmin, transparent 3.4vmin), radial-gradient(2vmin 1.5vmin at 84% 55%, #fff 5vmin, transparent 5.5vmin), radial-gradient(2vmin 1.5vmin at 78% 72%, #fff 4vmin, transparent 4.5vmin), radial-gradient(2vmin 1.5vmin at 55% 72%, #fff 5.5vmin, transparent 6vmin), radial-gradient(2vmin 1.5vmin at 35% 80%, #fff 2.5vmin, transparent 3vmin), radial-gradient(2vmin 1.5vmin at 16% 70%, #fff 4.5vmin, transparent 5vmin), radial-gradient(2vmin 0.9vmin at 50% 55%, #fff 14.5vmin, transparent 15vmin);
 }
 
 .cloud div:nth-child(2) {
   width: 50vmin;
   height: 30vmin;
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 65%;
   opacity: 0.7;
-  background: radial-gradient(1vmin 1vmin at 21% 53%, #fff 6.6vmin, transparent 7vmin), radial-gradient(1vmin 1vmin at 38% 42%, #fff 8vmin, transparent 8.4vmin), radial-gradient(1vmin 1vmin at 59% 40%, #fff 8.5vmin, transparent 8.9vmin), radial-gradient(1vmin 1vmin at 76% 34%, #fff 2.5vmin, transparent 2.9vmin), radial-gradient(1vmin 1vmin at 82% 55%, #fff 6vmin, transparent 6.5vmin), radial-gradient(2vmin 1.5vmin at 88% 66%, #fff 5.5vmin, transparent 6vmin), radial-gradient(2vmin 1.5vmin at 74% 76%, #fff 4vmin, transparent 4.5vmin), radial-gradient(2vmin 1.5vmin at 59% 80%, #fff 5.5vmin, transparent 6vmin), radial-gradient(2vmin 1.1vmin at 39% 80%, #fff 7.5vmin, transparent 8vmin), radial-gradient(2vmin 1.5vmin at 16% 70%, #fff 7.5vmin, transparent 7.9vmin), radial-gradient(2vmin 1vmin at 42% 56%, #fff 17vmin, transparent 17.4vmin);
+  background: radial-gradient(1vmin 1vmin at 21% 53%, #fff 6.6vmin, transparent 7vmin), radial-gradient(1vmin 1vmin at 38% 42%, #fff 8vmin, transparent 8.4vmin), radial-gradient(1vmin 1vmin at 59% 40%, #fff 8.5vmin, transparent 8.9vmin), radial-gradient(1vmin 1vmin at 76% 34%, #fff 3vmin, transparent 3.4vmin), radial-gradient(1vmin 1vmin at 82% 55%, #fff 6vmin, transparent 6.5vmin), radial-gradient(2vmin 1.5vmin at 88% 66%, #fff 5.5vmin, transparent 6vmin), radial-gradient(2vmin 1.5vmin at 74% 76%, #fff 4vmin, transparent 4.5vmin), radial-gradient(2vmin 1.5vmin at 59% 80%, #fff 5.5vmin, transparent 6vmin), radial-gradient(2vmin 1.1vmin at 39% 80%, #fff 7.5vmin, transparent 8vmin), radial-gradient(2vmin 1.5vmin at 16% 70%, #fff 7.5vmin, transparent 7.9vmin), radial-gradient(2vmin 1vmin at 42% 56%, #fff 17vmin, transparent 17.4vmin);
 }
 
 .madeline-container {

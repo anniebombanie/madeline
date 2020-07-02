@@ -35,7 +35,7 @@ $t: transparent;
 body {
   margin: 0;
   background: $cloud;
-  // background: linear-gradient( $peach, $y, $w );
+  background: linear-gradient( $cloud 60%, pink );
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -47,26 +47,51 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: pink;
 
   div {
     &:nth-child( 1 ) {
       @include w-h ( 30vmin, 20vmin );
-      background-color: green;
       position: absolute;
       top: 48%;
-      left: 20%;
+      left: 15%;
+      opacity: 0.7;
       background:
-        radial-gradient( circle at 50% -50%, $skin 72%, $w 72.5% );
+        radial-gradient( 1vmin 1vmin at 33% 49%, $w 6.5vmin, $t 6.9vmin ),
+        radial-gradient( 2vmin 1.2vmin at 59% 30%, $w 6.5vmin, $t 7vmin ),
+        radial-gradient( 1vmin 1vmin at 83% 35%, $w 2vmin, $t 2.3vmin ),
+        radial-gradient( 2vmin 1.5vmin at 78% 72%, $w 4vmin, $t 4.5vmin ),
+        radial-gradient( 2vmin 1.5vmin at 55% 72%, $w 5.5vmin, $t 6vmin ),
+        radial-gradient( 2vmin 1.5vmin at 35% 82%, $w 2.5vmin, $t 3vmin ),
+        radial-gradient( 2vmin 1.5vmin at 20% 72%, $w 4.5vmin, $t 5vmin ),
+        radial-gradient( 2vmin 0.9vmin at 50% 55%, $w 14.5vmin, $t 15vmin );
       // transform: translateY( -20vmin );
     }
+
+    &:nth-child( 2 ) {
+      @include w-h ( 50vmin, 30vmin );
+      border: 1px dotted green;
+      position: absolute;
+      top: 20%;
+      left: 65%;
+      opacity: 0.7;
+      background:
+        radial-gradient( 1vmin 1vmin at 33% 49%, $w 6.5vmin, $t 6.9vmin ),
+        radial-gradient( 2vmin 1.2vmin at 59% 30%, $w 6.5vmin, $t 7vmin ),
+        radial-gradient( 1vmin 1vmin at 80% 55%, $w 6vmin, $t 6.5vmin ),
+        radial-gradient( 2vmin 1.5vmin at 70% 76%, $w 4vmin, $t 4.5vmin ),
+        radial-gradient( 2vmin 1.5vmin at 55% 80%,$w 5.5vmin, $t 6vmin ),
+        radial-gradient( 2vmin 1.1vmin at 35% 80%, $w 7.5vmin, $t 8vmin ),
+        radial-gradient( 2vmin 1.5vmin at 20% 75%,$w 4.5vmin, $t 4.9vmin ),
+        radial-gradient( 2vmin 1vmin at 45% 55%, $w 20.5vmin, $t 21vmin );
+    }
+
   }
 }
 
 .madeline-container {
   @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
-  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   // opacity: 0.2;
   background-size: auto 96%;
   // border: 1px solid red;

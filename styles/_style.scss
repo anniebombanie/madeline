@@ -282,13 +282,13 @@ body {
   &__l,
   &__r {
     position: absolute;
+    @include w-h( 50%, 15% );
     // border: 1px solid red;
     // background-color: $skin;
     // background-color: rgba( $skin, 0.5 );
   }
 
   &__l {
-    @include w-h( 50%, 15% );
     top: 56%;
     // top: 70%;
     left: 1.1%;
@@ -322,22 +322,21 @@ body {
   }
 
   &__r {
-    @include w-h( 48%, 15% );
     rotate: 2deg;
     top: 65%;
-    left: 54%;
+    left: 53%;
 
     &::before {
       @include pseduo-div( 75%, 25%, null );
       top: 14%;
-      right: -12%;
+      right: -14%;
       transform: perspective( 20vmin ) rotateY( 35deg );
       background:
-        radial-gradient( 2% 3% at 89% 10%, $w 1vmin, $t 1.1vmin ),
-        radial-gradient( 2% 3% at 88% 30%, $w 1vmin, $t 1.1vmin ),
-        radial-gradient( 2% 3% at 87% 50%, $w 1vmin, $t 1.1vmin ),
-        radial-gradient( 2% 3% at 86% 70%, $w 1vmin, $t 1.1vmin ),
-        radial-gradient( 2% 3% at 85% 90%, $w 1vmin, $t 1.1vmin ),
+        radial-gradient( 2% 3% at 86% 10%, $w 1vmin, $t 1.1vmin ),
+        radial-gradient( 2% 3% at 85% 30%, $w 1vmin, $t 1.1vmin ),
+        radial-gradient( 2% 3% at 84% 50%, $w 1vmin, $t 1.1vmin ),
+        radial-gradient( 2% 3% at 83% 70%, $w 1vmin, $t 1.1vmin ),
+        radial-gradient( 2% 3% at 82% 90%, $w 1vmin, $t 1.1vmin ),
         radial-gradient( circle at 0% 0%, $skin 8.2vmin, $t 8.3vmin ),
         radial-gradient( circle at 0% 0%, $w 12.5vmin, $t 12.6vmin );
     }

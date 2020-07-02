@@ -47,7 +47,7 @@ body {
   @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
   // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
-  // background: 0.2;
+  // opacity: 0.2;
   background-size: auto 96%;
   // border: 1px solid red;
   z-index: -20;
@@ -150,7 +150,7 @@ body {
 
   &__face {
     @include w-h( 44%, 42% );
-    border-radius: 30% 30% 60% 70% / 80% 80% 60% 70%;
+    border-radius: 30% 30% 60% 70% / 80% 80% 70% 70%;
     transform: skew( -1deg );
     background:
       // nose
@@ -201,7 +201,7 @@ body {
 }
 
 .body {
-  // border: 1px dashed green;
+  border: 1px dashed green;
   @include w-h( 66%, 34.4% );
   position: absolute;
   top: 65.6%;
@@ -209,11 +209,11 @@ body {
 
   // dress
   &::before {
-    // @include pseduo-div( 84%, 66%, $navy );
-    // background-color: $navy;
-    // background-color: rgba( $navy, 0.5 );
-    // border-radius: 0 0 45% 55% / 0 0 18% 18%;
-    // border-radius: 50% / 100% 100% 0% 0%;
+    @include pseduo-div( 84%, 66%, $navy );
+    background-color: $navy;
+    background-color: rgba( $navy, 0.5 );
+    border-radius: 0 0 45% 55% / 0 0 18% 18%;
+    border-radius: 50% / 100% 100% 0% 0%;
     rotate: -3deg;
     top: 0;
     left: 3%;
@@ -291,34 +291,35 @@ body {
 
   &__l {
     @include w-h( 50%, 15% );
-    top: 55.5%;
+    top: 57%;
     // top: 70%;
     left: 3%;
-    rotate: 45deg;
+    rotate: 40deg;
 
-    // &::before {
-    //   @include pseduo-div( 75%, 25%, null );
-    //   // border: 1px dashed green;
-    //   top: 14%;
-    //   right: -12%;
-    //   transform: perspective( 20vmin ) rotateY( 35deg );
-    //   background:
-    //     radial-gradient( 2% 3% at 90% 10%, $white 1vmin, $t 1.1vmin ),
-    //     radial-gradient( 2% 3% at 92% 30%, $white 1vmin, $t 1.1vmin ),
-    //     radial-gradient( 2% 3% at 92% 50%, $white 1vmin, $t 1.1vmin ),
-    //     radial-gradient( 2% 3% at 92% 70%, $white 1vmin, $t 1.1vmin ),
-    //     radial-gradient( 2% 3% at 92% 90%, $white 1vmin, $t 1.1vmin ),
-    //     radial-gradient( circle at 0% 0%, $skin 7.5vmin, $t 7.6vmin ),
-    //     radial-gradient( circle at 0% 0%, $white 12.5vmin, $t 12.6vmin );
-    // }
+    &::before {
+      @include pseduo-div( 75%, 25%, null );
+      // border: 1px dashed green;
+      top: 0%;
+      left: -18%;
+      transform: perspective( 20vmin ) rotateY( 135deg );
+      transform-origin: 50% 0%;
+      background:
+        radial-gradient( 2% 3% at 84% 10%, $white 1vmin, $t 1.1vmin ),
+        radial-gradient( 2% 3% at 83% 30%, $white 1vmin, $t 1.1vmin ),
+        radial-gradient( 2% 3% at 82% 50%, $white 1vmin, $t 1.1vmin ),
+        radial-gradient( 2% 3% at 81% 70%, $white 1vmin, $t 1.1vmin ),
+        radial-gradient( 2% 3% at 80% 90%, $white 1vmin, $t 1.1vmin ),
+        radial-gradient( circle at 0% 0%, $t 3vmin, $skin 3vmin, $skin 8.2vmin, $t 8.3vmin ),
+        radial-gradient( circle at 0% 0%, $t 3vmin, $white 3vmin, $white 12.5vmin, $t 12.6vmin );
+    }
 
     &::after {
       @include pseduo-div( 100%, 100%, yellow );
-      clip-path: polygon( 10% 0, 100% 100%, 100% 0 );
       background:
-        radial-gradient( 1% 2% at 90% 5%, $white 2.2vmin, $t 2.3vmin ),
-        radial-gradient( 1% 2% at 89% 12%, $white 2.2vmin, $t 2.3vmin ),
-        radial-gradient( 5% 8% at 100% -50%, $navy 15.5vmin, $t 15.6vmin );
+        radial-gradient( 1% 2% at 87% 5%, $white 2.2vmin, $t 2.3vmin ),
+        radial-gradient( 1% 2% at 90% 0%, $white 2.2vmin, $t 2.3vmin ),
+        radial-gradient( circle at 89% 12%, $white 2.2vmin, $t 2.3vmin ),
+        radial-gradient( 5% 8% at 105% -50%, $navy 15.5vmin, $t 15.6vmin );
     }
   }
 
@@ -340,7 +341,7 @@ body {
         radial-gradient( 2% 3% at 92% 50%, $white 1vmin, $t 1.1vmin ),
         radial-gradient( 2% 3% at 92% 70%, $white 1vmin, $t 1.1vmin ),
         radial-gradient( 2% 3% at 92% 90%, $white 1vmin, $t 1.1vmin ),
-        radial-gradient( circle at 0% 0%, $skin 7.5vmin, $t 7.6vmin ),
+        radial-gradient( circle at 0% 0%, $skin 8.2vmin, $t 8.3vmin ),
         radial-gradient( circle at 0% 0%, $white 12.5vmin, $t 12.6vmin );
     }
 
@@ -348,6 +349,7 @@ body {
       @include pseduo-div( 75%, 100%, null );
       clip-path: polygon( 0 0, 15% 100%, 100% 15% );
       background:
+        radial-gradient( 2.5% 3% at 15% 5%, $white 2.2vmin, $t 2.3vmin ),
         radial-gradient( 2.5% 3% at 18% 12%, $white 2.2vmin, $t 2.3vmin ),
         radial-gradient( 6% 5% at 0% 0%, $navy 11.5vmin, $t 11.6vmin );
     }

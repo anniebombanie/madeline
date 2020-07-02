@@ -43,14 +43,34 @@ body {
   overflow: hidden;
 }
 
+.cloud {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+
+  div {
+    &:nth-child( 1 ) {
+      @include w-h ( 30vmin, 20vmin );
+      background-color: green;
+      position: absolute;
+      top: 48%;
+      left: 20%;
+      background:
+        radial-gradient( circle at 50% -50%, $skin 72%, $w 72.5% );
+      // transform: translateY( -20vmin );
+    }
+  }
+}
+
 .madeline-container {
   @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
-  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   // opacity: 0.2;
   background-size: auto 96%;
   // border: 1px solid red;
-  z-index: -20;
+  z-index: 10;
 }
 
 .balloon {
@@ -187,15 +207,15 @@ body {
     @include w-h( 84%, 36% );
     background-color: $y;
     border-radius: 70% 70% 50% 50% / 70% 70% 80% 80%;
-    // border: 1px dashed black;
-    // @include w-h( 0, 30% );
-    // border-left: 17vmin solid transparent;
-    // border-right: 17vmin solid transparent;
-    // border-top: 13vmin solid $y;
     position: absolute;
     top: 28%;
     left: 15%;
     transform: rotateZ( 4deg );
+
+    // &::after,
+    // &::before {
+
+    // }
   }
 }
 

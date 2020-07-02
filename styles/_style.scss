@@ -52,7 +52,7 @@ body {
     &:nth-child( 1 ) {
       @include w-h ( 36vmin, 25vmin );
       position: absolute;
-      top: 48%;
+      top: 40%;
       left: 3%;
       opacity: 0.6;
       // border: 1px dotted green;
@@ -74,7 +74,7 @@ body {
       @include w-h ( 50vmin, 30vmin );
       position: absolute;
       top: 3%;
-      left: 65%;
+      left: 72%;
       opacity: 0.7;
       background:
         radial-gradient( 1vmin 1vmin at 21% 53%, $w 6.6vmin, $t 7vmin ),
@@ -91,12 +91,12 @@ body {
     }
 
     &:nth-child( 3 ) {
-      @include w-h ( 30vmin, 20vmin );
+      @include w-h ( 25vmin, 15vmin );
       position: absolute;
       top: 68%;
       left: 63%;
       opacity: 0.5;
-      // border: 1px dotted green;
+      border: 1px dotted green;
       background:
         radial-gradient( 1vmin 1vmin at 16% 53%, $w 4vmin, $t 4.4vmin ),
         radial-gradient( 0.8vmin 1vmin at 33% 51%, $w 6vmin, $t 6.4vmin ),

@@ -29,7 +29,6 @@ body {
   width: 40.5vmin;
   height: 91.8vmin;
   position: relative;
-  background: url("https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg") 53.5% 340% no-repeat;
   background-size: auto 96%;
   z-index: -20;
 }
@@ -109,6 +108,18 @@ body {
           transform: rotateZ(-3.5deg);
 }
 
+.head__hair, .head__hair--fringe {
+  width: 80%;
+  height: 47%;
+  position: absolute;
+  top: 51%;
+  left: 12%;
+  border-radius: 50% 50% 60% 60% / 90% 90% 35% 35%;
+  -webkit-transform: rotateZ(2.5deg);
+          transform: rotateZ(2.5deg);
+  overflow: hidden;
+}
+
 .head__hair {
   background-color: #d25317;
 }
@@ -144,7 +155,9 @@ body {
 .head__face {
   width: 44%;
   height: 42%;
-  border-radius: 70% 70% 60% 70% / 90% 80% 60% 70%;
+  border-radius: 30% 30% 60% 70% / 80% 80% 60% 70%;
+  -webkit-transform: skew(-1deg);
+          transform: skew(-1deg);
   background: radial-gradient(12% 8% at 58% 60%, #efdebd 0.5vmin, transparent 0.7vmin), radial-gradient(10% 8% at 59% 63%, rgba(0, 0, 0, 0.7) 0.4vmin, transparent 0.6vmin), linear-gradient(50deg, transparent 49%, #efdebd 50%), radial-gradient(2.4% 1.2% at 53.5% 73.5%, #efdebd 2vmin, transparent 2.2vmin), radial-gradient(2.2% 1.2% at 54% 76%, rgba(0, 0, 0, 0.7) 2vmin, transparent 2.2vmin), #efdebd;
   position: absolute;
   top: 57%;
@@ -261,16 +274,15 @@ body {
 }
 
 .arm__l, .arm__r {
-  width: 46%;
-  height: 15%;
   position: absolute;
-  border: 1px solid red;
 }
 
 .arm__l {
-  top: 62.5%;
-  left: 8%;
-  rotate: 5deg;
+  width: 50%;
+  height: 15%;
+  top: 55.5%;
+  left: 3%;
+  rotate: 45deg;
 }
 
 .arm__l::after {
@@ -280,12 +292,14 @@ body {
   display: block;
   position: absolute;
   background-color: yellow;
-  border: 1px solid yellow;
-  -webkit-clip-path: polygon(25% 0, 85% 100%, 100% 0);
-          clip-path: polygon(25% 0, 85% 100%, 100% 0);
+  -webkit-clip-path: polygon(10% 0, 100% 100%, 100% 0);
+          clip-path: polygon(10% 0, 100% 100%, 100% 0);
+  background: radial-gradient(1% 2% at 90% 5%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(1% 2% at 89% 12%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(5% 8% at 100% -50%, #010152 15.5vmin, transparent 15.6vmin);
 }
 
 .arm__r {
+  width: 46%;
+  height: 15%;
   rotate: 2deg;
   top: 65%;
   left: 54%;
@@ -310,8 +324,7 @@ body {
   height: 100%;
   display: block;
   position: absolute;
-  border: 1px solid yellow;
   -webkit-clip-path: polygon(0 0, 15% 100%, 100% 15%);
           clip-path: polygon(0 0, 15% 100%, 100% 15%);
-  background: radial-gradient(2% 3% at 15% 10%, #fff 2vmin, transparent 2.1vmin), radial-gradient(6% 5% at 0% 0%, #010152 11.5vmin, transparent 11.6vmin);
+  background: radial-gradient(2.5% 3% at 18% 12%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(6% 5% at 0% 0%, #010152 11.5vmin, transparent 11.6vmin);
 }

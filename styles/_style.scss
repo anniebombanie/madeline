@@ -46,7 +46,7 @@ body {
 .madeline-container {
   @include w-h( 40.5vmin, 91.8vmin );
   position: relative;
-  background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
+  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   // background: 0.2;
   background-size: auto 96%;
   // border: 1px solid red;
@@ -109,17 +109,17 @@ body {
   }
 
   // hair
-  // &__hair,
-  // &__hair--fringe {
-  //   @include w-h( 80%, 47% );
-  //   // border: 1px dashed green;
-  //   position: absolute;
-  //   top: 52%;
-  //   left: 12%;
-  //   border-radius: 50% 50% 60% 60% / 90% 90% 35% 35%;
-  //   transform: rotateZ( 2.5deg );
-  //   overflow: hidden;
-  // }
+  &__hair,
+  &__hair--fringe {
+    @include w-h( 80%, 47% );
+    // border: 1px dashed green;
+    position: absolute;
+    top: 51%;
+    left: 12%;
+    border-radius: 50% 50% 60% 60% / 90% 90% 35% 35%;
+    transform: rotateZ( 2.5deg );
+    overflow: hidden;
+  }
 
   &__hair {
     background-color: $o;
@@ -150,9 +150,8 @@ body {
 
   &__face {
     @include w-h( 44%, 42% );
-    border-radius: 70% 70% 60% 70% / 90% 80% 60% 70%;
-    // box-shadow: 0 2px 0 rgba(255,255,255, 0.8);
-    // transform: skew( -1deg );
+    border-radius: 30% 30% 60% 70% / 80% 80% 60% 70%;
+    transform: skew( -1deg );
     background:
       // nose
       radial-gradient( 12% 8% at 58% 60%, $skin 0.5vmin, $t 0.7vmin ),
@@ -232,49 +231,51 @@ body {
   }
 
   // legs
-  &__leg-l,
-  &__leg-r {
+  &__leg {
+    &-l,
+    &-r {
     // Leg
-    &::after {
-      @include pseduo-div( 13%, 28%, null );
-      position: absolute;
-      // opacity: 0.5;
-      background: linear-gradient( $skin 52%, $white 52.5% );
+      &::after {
+        @include pseduo-div( 13%, 28%, null );
+        position: absolute;
+        // opacity: 0.5;
+        background: linear-gradient( $skin 52%, $white 52.5% );
+      }
+
+      // Shoe
+      &::before {
+        @include pseduo-div( 20%, 7%, $b );
+        border-radius: 50%;
+      }
     }
 
-    // Shoe
-    &::before {
-      @include pseduo-div( 20%, 7%, $b );
-      border-radius: 50%;
-    }
-  }
+    &-l {
+      &::after {
+        top: 69%;
+        left: 12.8%;
+        border-radius: 0 0 50% 50% / 0 0 5% 8%;
+        rotate: 18deg;
+      }
 
-  &__leg-l {
-    &::after {
-      top: 69%;
-      left: 12.8%;
-      border-radius: 0 0 50% 50% / 0 0 5% 8%;
-      rotate: 18deg;
-    }
-
-    &::before {
-      top: 93%;
-      left: 0%;
-    }
-  }
-
-  &__leg-r {
-    &::after {
-      top: 68%;
-      left: 72%;
-      border-radius: 0 0 50% 50% / 0 0 10% 5%;
-      rotate: -33deg;
+      &::before {
+        top: 93%;
+        left: 0%;
+      }
     }
 
-    &::before {
-      top: 89%;
-      right: -1%;
-      transform: rotate( -15deg );
+    &-r {
+      &::after {
+        top: 68%;
+        left: 72%;
+        border-radius: 0 0 50% 50% / 0 0 10% 5%;
+        rotate: -33deg;
+      }
+
+      &::before {
+        top: 89%;
+        right: -1%;
+        transform: rotate( -15deg );
+      }
     }
   }
 }
@@ -282,17 +283,18 @@ body {
 .arm {
   &__l,
   &__r {
-    @include w-h( 46%, 15% );
     position: absolute;
-    border: 1px solid red;
+    // border: 1px solid red;
     // background-color: $skin;
     // background-color: rgba( $skin, 0.5 );
   }
 
   &__l {
-    top: 62.5%;
-    left: 8%;
-    rotate: 5deg;
+    @include w-h( 50%, 15% );
+    top: 55.5%;
+    // top: 70%;
+    left: 3%;
+    rotate: 45deg;
 
     // &::before {
     //   @include pseduo-div( 75%, 25%, null );
@@ -312,15 +314,16 @@ body {
 
     &::after {
       @include pseduo-div( 100%, 100%, yellow );
-      border: 1px solid yellow;
-      clip-path: polygon( 25% 0, 85% 100%, 100% 0 );
-      // background:
-        // radial-gradient( 2% 3% at 15% 10%, $white 2vmin, $t 2.1vmin ),
-        // radial-gradient( 6% 5% at 0% 100%, $navy 11.5vmin, $t 11.6vmin );
+      clip-path: polygon( 10% 0, 100% 100%, 100% 0 );
+      background:
+        radial-gradient( 1% 2% at 90% 5%, $white 2.2vmin, $t 2.3vmin ),
+        radial-gradient( 1% 2% at 89% 12%, $white 2.2vmin, $t 2.3vmin ),
+        radial-gradient( 5% 8% at 100% -50%, $navy 15.5vmin, $t 15.6vmin );
     }
   }
 
   &__r {
+    @include w-h( 46%, 15% );
     rotate: 2deg;
     top: 65%;
     left: 54%;
@@ -343,10 +346,9 @@ body {
 
     &::after {
       @include pseduo-div( 75%, 100%, null );
-      border: 1px solid yellow;
       clip-path: polygon( 0 0, 15% 100%, 100% 15% );
       background:
-        radial-gradient( 2% 3% at 15% 10%, $white 2vmin, $t 2.1vmin ),
+        radial-gradient( 2.5% 3% at 18% 12%, $white 2.2vmin, $t 2.3vmin ),
         radial-gradient( 6% 5% at 0% 0%, $navy 11.5vmin, $t 11.6vmin );
     }
   }

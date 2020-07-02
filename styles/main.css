@@ -113,7 +113,7 @@ body {
   height: 26vmin;
   display: block;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #6e3d6d;
   top: 100%;
   left: 50.5%;
 }
@@ -203,7 +203,7 @@ body {
   border-radius: 30% 30% 60% 70% / 80% 80% 70% 70%;
   -webkit-transform: skew(-1deg);
           transform: skew(-1deg);
-  background: radial-gradient(12% 8% at 58% 60%, #efdebd 0.5vmin, transparent 0.7vmin), radial-gradient(10% 8% at 59% 63%, rgba(0, 0, 0, 0.7) 0.4vmin, transparent 0.6vmin), linear-gradient(50deg, transparent 49%, #efdebd 50%), radial-gradient(2.4% 1.2% at 53.5% 73.5%, #efdebd 2vmin, transparent 2.2vmin), radial-gradient(2.2% 1.2% at 54% 76%, rgba(0, 0, 0, 0.7) 2vmin, transparent 2.2vmin), #efdebd;
+  background: radial-gradient(12% 8% at 58% 60%, #efdebd 0.5vmin, transparent 0.7vmin), radial-gradient(10% 8% at 59% 63%, rgba(0, 0, 0, 0.7) 0.4vmin, transparent 0.6vmin), linear-gradient(-50deg, transparent 46%, #efdebd 46.5%), linear-gradient(50deg, transparent 51%, #efdebd 51.5%), radial-gradient(2.4% 1.2% at 53.5% 73.7%, #efdebd 1.9vmin, transparent 2.2vmin), radial-gradient(2.2% 1.2% at 54% 76%, rgba(0, 0, 0, 0.7) 2vmin, transparent 2.2vmin), #efdebd;
   position: absolute;
   top: 57%;
   left: 33.5%;
@@ -248,6 +248,10 @@ body {
   position: absolute;
   top: 65.6%;
   left: 23.5%;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transform: rotate(-5deg) skewX(-5deg);
+          transform: rotate(-5deg) skewX(-5deg);
 }
 
 .body::before {
@@ -323,8 +327,8 @@ body {
 .body__leg-r::before {
   top: 89.5%;
   right: -1%;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 .arm__l, .arm__r {
@@ -392,4 +396,34 @@ body {
   -webkit-clip-path: polygon(0 0, 10% 100%, 100% 15%);
           clip-path: polygon(0 0, 10% 100%, 100% 15%);
   background: radial-gradient(2.5% 3% at 15% 5%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(2.5% 3% at 17% 12%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(2.5% 3% at 18% 12%, #fff 2.2vmin, transparent 2.3vmin), radial-gradient(6% 5% at 0% 0%, #010152 12.5vmin, transparent 12.6vmin);
+}
+
+/* --- Animation --- */
+@-webkit-keyframes sway {
+  0% {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+}
+@keyframes sway {
+  0% {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
+  }
 }

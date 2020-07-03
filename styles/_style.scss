@@ -280,12 +280,11 @@ body {
     // ribbons
     &::after,
     &::before {
-      @include pseduo-div( 25%, 30%, rgba( $b, 0.8 ));
-      border-radius: 5% 10% 10% 5% / 20% 10% 10% 20%;
+      @include pseduo-div( 24%, 30%, rgba( $b, 0.8 ));
       // border: 1px solid green;
       background:
         radial-gradient( 1% 1.5% at 20% 120%, $t 3vmin, $b 3.1vmin, $b 5vmin, $t 5.1vmin),
-        radial-gradient( 2% 1.5% at 25% 100%, $t 2vmin, $b 2.2vmin, $b 5vmin, $t 5.1vmin);
+        radial-gradient( 2.2% 1.5% at 22% 107%, $t 3vmin, $b 3.2vmin, $b 6vmin, $t 6vmin);
     }
 
     &::before {
@@ -295,8 +294,8 @@ body {
     }
 
     &::after {
-      top: 100%;
-      left: -11%;
+      top: 103%;
+      left: -13%;
       transform: rotate( -62deg );
     }
   }

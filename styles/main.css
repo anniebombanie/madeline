@@ -250,13 +250,12 @@ body {
 
 .head__hat::after, .head__hat::before {
   content: '';
-  width: 25%;
+  width: 24%;
   height: 30%;
   display: block;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 5% 10% 10% 5% / 20% 10% 10% 20%;
-  background: radial-gradient(1% 1.5% at 20% 120%, transparent 3vmin, #000 3.1vmin, #000 5vmin, transparent 5.1vmin), radial-gradient(2% 1.5% at 25% 100%, transparent 2vmin, #000 2.2vmin, #000 5vmin, transparent 5.1vmin);
+  background: radial-gradient(1% 1.5% at 20% 120%, transparent 3vmin, #000 3.1vmin, #000 5vmin, transparent 5.1vmin), radial-gradient(2.2% 1.5% at 22% 107%, transparent 3vmin, #000 3.2vmin, #000 6vmin, transparent 6vmin);
 }
 
 .head__hat::before {
@@ -267,8 +266,8 @@ body {
 }
 
 .head__hat::after {
-  top: 100%;
-  left: -11%;
+  top: 103%;
+  left: -13%;
   -webkit-transform: rotate(-62deg);
           transform: rotate(-62deg);
 }

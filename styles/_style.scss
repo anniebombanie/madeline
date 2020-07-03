@@ -32,6 +32,7 @@ $t: transparent;
   height: $h;
 }
 
+/* --- Styles --- */
 body {
   margin: 0;
   background: linear-gradient( $pr 50%, $pk );
@@ -130,8 +131,7 @@ body {
 .balloon {
   @include w-h( 20vmin, 24vmin );
   position: absolute;
-  background:
-    $r;
+  background: $r;
   border-radius: 50%;
   top: 50%;
   left: 50%;

@@ -9,6 +9,7 @@ html {
 }
 
 /* --- Colours --- */
+/* --- Styles --- */
 body {
   margin: 0;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d8b9d7), to(#ffc0cb));

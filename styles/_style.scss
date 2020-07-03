@@ -46,6 +46,7 @@ body {
 .cloud {
   div {
     position: absolute;
+    will-change: margin-top;
 
     &:nth-child( 1 ) {
       @include w-h ( 36vmin, 25vmin );
@@ -134,7 +135,7 @@ body {
   border-radius: 50%;
   top: 50%;
   left: 50%;
-  transform: translate3d( -115%, -200%, 0 );
+  transform: translate3d( -114%, -200%, 0 );
   animation: balloon-move 1.3s infinite alternate ease-in-out;
 
   &::after {
@@ -234,7 +235,7 @@ body {
       //mouth
       linear-gradient( -50deg, $t 46%, $skin 46.5% ),
       linear-gradient( 50deg, $t 51%, $skin 51.5% ),
-      radial-gradient( 2.4% 1.2% at 53.5% 74%, $skin 1.9vmin, $t 2.2vmin ),
+      radial-gradient( 2.4% 1.2% at 54% 74%, $skin 1.9vmin, $t 2.2vmin ),
       radial-gradient( 2.2% 1.2% at 54% 76%, rgba( $b, 0.75 ) 2vmin, $t 2.2vmin ),
       $skin;
 
@@ -243,7 +244,8 @@ body {
     &::after {
       @include pseduo-div( 5%, 11%, rgba( $b, 0.8 ));
       border-radius: 50%;
-      animation: eyes-blink 6s infinite ;
+      animation: eyes-blink 7s infinite;
+      will-change: transform;
     }
 
     &::before {
@@ -316,7 +318,7 @@ body {
     @include pseduo-div( 82.6%, 18%, $n );
     border-radius: 50%;
     top: 56.7%;
-    left: 5.6%;
+    left: 5.5%;
     transform: rotate( -3deg );
   }
 
@@ -468,18 +470,34 @@ body {
 
 @keyframes eyes-blink {
   0% {
-    transform: scaleY( 0.1 );
-  }
-
-  2% {
     transform: scaleY( 1 );
   }
 
-  4% {
+  2% {
     transform: scaleY( 0.1 );
   }
 
+  4% {
+    transform: scaleY( 1 );
+  }
+
   6% {
+    transform: scaleY( 0.1 );
+  }
+
+  8% {
+    transform: scaleY( 1 );
+  }
+
+  66% {
+    transform: scaleY( 1 );
+  }
+
+  68% {
+    transform: scaleY( 0.1 );
+  }
+
+  70% {
     transform: scaleY( 1 );
   }
 

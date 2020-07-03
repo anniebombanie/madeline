@@ -128,7 +128,7 @@ body {
   // opacity: 0.2;
   // background-size: auto 96%;
   // border: 1px solid red;
-  // z-index: 10;
+  z-index: 10;
   animation: body-move 1.3s infinite alternate ease-in-out;
 }
 
@@ -152,7 +152,7 @@ body {
   }
 
   &::before {
-    @include pseduo-div( 0.2vmin, 26vmin, darken( $pr, 45 ));
+    @include pseduo-div( 0.2vmin, 26vmin, darken( $pr, 40 ));
     top: 100%;
     left: 50.2%;
   }
@@ -163,8 +163,6 @@ body {
   position: relative;
   top: 40%;
   left: 11.5%;
-  // transform: rotate( -10deg );
-  transform-origin: 50% 100%;
 
   // top bow ribbons
   &::before,
@@ -236,20 +234,25 @@ body {
     left: 33.5%;
     z-index: 10;
     background:
+      // eyebrows
+      // radial-gradient( circle at 37% 36%, $skin 1.5vmin, $t 1.6vmin ),
+      // radial-gradient( 1% 1.2% at 35% 27%, rgba( $b, 0.75 ) 0.9vmin, $t 1vmin ),
+      // radial-gradient( circle at 72% 36%, $skin 1.5vmin, $t 1.6vmin ),
+      // radial-gradient( 1% 1.2% at 73% 27%, rgba( $b, 0.75 ) 0.9vmin, $t 1vmin ),
       // nose
       radial-gradient( 12% 8% at 58% 60%, $skin 0.5vmin, $t 0.7vmin ),
-      radial-gradient( 10% 8% at 59% 63%, rgba( $b, 0.7 ) 0.4vmin, $t 0.6vmin ),
+      radial-gradient( 10% 8% at 59% 63%, rgba( $b, 0.75 ) 0.4vmin, $t 0.6vmin ),
       //mouth
       linear-gradient( -50deg, $t 46%, $skin 46.5% ),
       linear-gradient( 50deg, $t 51%, $skin 51.5% ),
-      radial-gradient( 2.4% 1.2% at 53.5% 73.7%, $skin 1.9vmin, $t 2.2vmin ),
-      radial-gradient( 2.2% 1.2% at 54% 76%, rgba( $b, 0.7 ) 2vmin, $t 2.2vmin ),
+      radial-gradient( 2.4% 1.2% at 53.5% 74%, $skin 1.9vmin, $t 2.2vmin ),
+      radial-gradient( 2.2% 1.2% at 54% 76%, rgba( $b, 0.75 ) 2vmin, $t 2.2vmin ),
       $skin;
 
     // eyes
     &::before,
     &::after {
-      @include pseduo-div( 5%, 10%, rgba( $b, 0.8 ));
+      @include pseduo-div( 5%, 11%, rgba( $b, 0.8 ));
       border-radius: 50%;
       animation: eyes-blink 7s infinite;
     }
@@ -271,13 +274,31 @@ body {
     border-radius: 70% 70% 50% 50% / 70% 70% 80% 80%;
     position: absolute;
     top: 28%;
-    left: 15%;
+    left: 13%;
     transform: rotateZ( 4deg );
 
-    // &::after,
-    // &::before {
+    // ribbons
+    &::after,
+    &::before {
+      @include pseduo-div( 25%, 30%, rgba( $b, 0.8 ));
+      border-radius: 5% 10% 10% 5% / 20% 10% 10% 20%;
+      // border: 1px solid green;
+      background:
+        radial-gradient( 1% 1.5% at 20% 120%, $t 3vmin, $b 3.1vmin, $b 5vmin, $t 5.1vmin),
+        radial-gradient( 2% 1.5% at 25% 100%, $t 2vmin, $b 2.2vmin, $b 5vmin, $t 5.1vmin);
+    }
 
-    // }
+    &::before {
+      top: 80%;
+      left: -16%;
+      transform: rotate( -45deg );
+    }
+
+    &::after {
+      top: 100%;
+      left: -11%;
+      transform: rotate( -62deg );
+    }
   }
 }
 

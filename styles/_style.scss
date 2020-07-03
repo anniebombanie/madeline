@@ -135,7 +135,9 @@ body {
 .balloon {
   @include w-h( 20vmin, 24vmin );
   position: absolute;
-  background-color: $r;
+  background:
+    radial-gradient( 1% 1% at 25% 30%, rgba( $w, 0.75 ) 1.4vmin, $t 1.5vmin ),
+    $r;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -229,6 +231,7 @@ body {
   &__face {
     @include w-h( 44%, 42% );
     border-radius: 30% 30% 60% 70% / 80% 80% 70% 70%;
+    // box-shadow: inset 1.5vmin 0 0 0 darken( $skin, 5 );
     position: absolute;
     top: 57%;
     left: 33.5%;
@@ -289,7 +292,7 @@ body {
 
     &::before {
       top: 80%;
-      left: -16%;
+      left: -17%;
       transform: rotate( -45deg );
     }
 
@@ -387,7 +390,10 @@ body {
   &__r {
     position: absolute;
     @include w-h( 50%, 15% );
-    // transform: rotate( -10deg );
+
+    &::before {
+      @include pseduo-div( 75%, 25%, null );
+    }
   }
 
   &__l {
@@ -397,7 +403,6 @@ body {
     transform-origin: 100% 0;
 
     &::before {
-      @include pseduo-div( 75%, 25%, null );
       // border: 1px dashed green;
       top: 0%;
       left: -18%;
@@ -431,7 +436,6 @@ body {
     animation: arm-move-right 1.3s infinite alternate ease-in-out;
 
     &::before {
-      @include pseduo-div( 75%, 25%, null );
       top: 14%;
       right: -14%;
       transform: perspective( 20vmin ) rotateY( 35deg );

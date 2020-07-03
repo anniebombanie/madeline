@@ -88,7 +88,7 @@ body {
   width: 20vmin;
   height: 24vmin;
   position: absolute;
-  background-color: #dd2602;
+  background: radial-gradient(1% 1% at 25% 30%, rgba(255, 255, 255, 0.75) 1.4vmin, transparent 1.5vmin), #dd2602;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -260,7 +260,7 @@ body {
 
 .head__hat::before {
   top: 80%;
-  left: -16%;
+  left: -17%;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -371,6 +371,14 @@ body {
   height: 15%;
 }
 
+.arm__l::before, .arm__r::before {
+  content: '';
+  width: 75%;
+  height: 25%;
+  display: block;
+  position: absolute;
+}
+
 .arm__l {
   top: 66%;
   left: 4%;
@@ -381,11 +389,6 @@ body {
 }
 
 .arm__l::before {
-  content: '';
-  width: 75%;
-  height: 25%;
-  display: block;
-  position: absolute;
   top: 0%;
   left: -18%;
   -webkit-transform: perspective(20vmin) rotateY(135deg);
@@ -417,11 +420,6 @@ body {
 }
 
 .arm__r::before {
-  content: '';
-  width: 75%;
-  height: 25%;
-  display: block;
-  position: absolute;
   top: 14%;
   right: -14%;
   -webkit-transform: perspective(20vmin) rotateY(35deg);

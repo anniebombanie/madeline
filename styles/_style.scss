@@ -47,12 +47,12 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 
   div {
     &:nth-child( 1 ) {
       @include w-h ( 36vmin, 25vmin );
-      position: absolute;
+      position: relative;
       top: 35%;
       left: 3%;
       opacity: 0.6;
@@ -67,7 +67,7 @@ body {
         radial-gradient( 2vmin 1.5vmin at 35% 80%, $w 2.5vmin, $t 3vmin ),
         radial-gradient( 2vmin 1.5vmin at 16% 70%, $w 4.5vmin, $t 5vmin ),
         radial-gradient( 2vmin 0.9vmin at 50% 55%, $w 14.5vmin, $t 15vmin );
-      // transform: translateY( -20vmin );
+      animation: moving-cloud 2s infinite linear;
     }
 
     &:nth-child( 2 ) {
@@ -457,5 +457,15 @@ body {
 
   100% {
     transform: rotate( 10deg );
+  }
+}
+
+@keyframes moving-cloud {
+  0% {
+    margin-bottom: 100%;
+  }
+
+  100% {
+    margin-bottom: 150%;
   }
 }

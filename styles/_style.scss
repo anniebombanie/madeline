@@ -145,13 +145,12 @@ body {
   left: -4%;
 
   &::after {
-    @include pseduo-div( 2vmin, 2vmin,  $r );
-    clip-path: polygon( 0% 0%, 100% 100%, 0% 100% );
+    @include pseduo-div( 2.2vmin, 1.6vmin,  $r );
     position: absolute;
-    top: 101%;
-    left: 45%;
-    border-radius: 40%;
-    transform: rotate( 124deg ) skew( -27deg )
+    top: 99.5%;
+    left: 44%;
+    transform: rotate( 5deg ) skewX( -5deg );
+    border-radius: 60% 60% 20% 20%;
   }
 
   &::before {
@@ -290,7 +289,7 @@ body {
   top: 65.6%;
   left: 23.5%;
   transform-origin: 50% 0%;
-  // animation: sway 1.5s infinite ease-in-out;
+  animation: sway 1.2s infinite alternate ease-in-out;
   transform: rotate( -5deg ) skewX( -5deg );
 
   // dress
@@ -330,7 +329,6 @@ body {
       // Shoe
       &::before {
         @include pseduo-div( 20%, 7%, $b );
-        border-radius: 50%;
       }
     }
 
@@ -345,20 +343,22 @@ body {
       &::before {
         top: 93%;
         left: 0.5%;
+        border-radius: 60% 50% 40% 30% / 80% 60% 70% 30%;
       }
     }
 
     &-r {
       &::after {
-        top: 68%;
+        top: 68.2%;
         left: 72%;
-        border-radius: 0 0 50% 50% / 0 0 10% 5%;
+        border-radius: 0 0 50% 50% / 0 0 10% 8%;
         rotate: -33deg;
       }
 
       &::before {
         top: 89.5%;
-        right: -1%;
+        right: -1.5%;
+        border-radius: 40% 60% 30% 40% / 60% 80% 30% 40%;
         transform: rotate( -10deg );
       }
     }
@@ -370,9 +370,6 @@ body {
   &__r {
     position: absolute;
     @include w-h( 50%, 15% );
-    // border: 1px solid red;
-    // background-color: $skin;
-    // background-color: rgba( $skin, 0.5 );
   }
 
   &__l {
@@ -447,11 +444,15 @@ body {
     transform: rotate( -7deg );
   }
 
-  50% {
+  6% {
+    transform: rotate( -7deg );
+  }
+
+  94% {
     transform: rotate( 10deg );
   }
 
   100% {
-    transform: rotate( -7deg );
+    transform: rotate( 10deg );
   }
 }

@@ -45,14 +45,7 @@ body {
 }
 
 .cloud {
-  // width: 100vw;
-  // height: 100%;
-  // border: 1px solid blue;
-  // overflow: hidden;
-  // position: relative;
-
   div {
-    // border: 1px dashed green;
     position: absolute;
 
     &:nth-child( 1 ) {
@@ -134,18 +127,21 @@ body {
   position: relative;
   // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
   // opacity: 0.2;
-  background-size: auto 96%;
+  // background-size: auto 96%;
   // border: 1px solid red;
-  z-index: 10;
+  // z-index: 10;
+  animation: body-move 1.3s infinite alternate ease-in-out;
 }
 
 .balloon {
-  @include w-h( 49%, 24% );
+  @include w-h( 20vmin, 24vmin );
   position: absolute;
   background-color: $r;
   border-radius: 50%;
-  top: 0;
-  left: -4%;
+  top: 50%;
+  left: 50%;
+  transform: translate3d( -115%, -200%, 0 );
+  animation: balloon-move 1.3s infinite alternate ease-in-out;
 
   &::after {
     @include pseduo-div( 2.2vmin, 1.6vmin,  $r );
@@ -159,7 +155,7 @@ body {
   &::before {
     @include pseduo-div( 0.2vmin, 26vmin, darken( $pr, 45 ));
     top: 100%;
-    left: 50.5%;
+    left: 50.2%;
   }
 }
 
@@ -256,16 +252,17 @@ body {
     &::after {
       @include pseduo-div( 5%, 10%, rgba( $b, 0.8 ));
       border-radius: 50%;
+      animation: eyes-blink 7s infinite;
     }
 
     &::before {
       top: 32%;
-      left: 34%;
+      left: 33%;
     }
 
     &::after {
       top: 34%;
-      left: 72%;
+      left: 71%;
     }
   }
 
@@ -286,14 +283,12 @@ body {
 }
 
 .body {
-  // border: 1px dashed green;
   @include w-h( 66%, 34.4% );
   position: absolute;
   top: 65.6%;
   left: 23.5%;
   transform-origin: 50% 0%;
-  // animation: body-sway 1.2s infinite alternate ease-in-out;
-  transform: rotate( -5deg ) skewX( -5deg );
+  animation: dress-sway 1.2s infinite alternate ease-in-out;
 
   // dress
   &::before {
@@ -414,6 +409,7 @@ body {
     top: 65%;
     left: 53%;
     transform-origin: 0 0;
+    animation: arm-move-right 1.3s infinite alternate ease-in-out;
 
     &::before {
       @include pseduo-div( 75%, 25%, null );
@@ -443,31 +439,98 @@ body {
 }
 
 /* --- Animation --- */
+@keyframes balloon-move {
+  0% {
+    margin-top: 0.5% ;
+  }
 
-// @keyframes body-sway {
-//   0% {
-//     transform: rotate( -7deg );
-//   }
+  100% {
+    margin-top: 0% ;
+  }
+}
 
-//   6% {
-//     transform: rotate( -7deg );
-//   }
+@keyframes body-move {
+  0% {
+    transform: rotate( -1deg );
+  }
 
-//   94% {
-//     transform: rotate( 10deg );
-//   }
+  6% {
+    transform: rotate( -1deg );
+  }
 
-//   100% {
-//     transform: rotate( 10deg );
-//   }
-// }
+  94% {
+    transform: rotate( 1deg );
+  }
 
-// @keyframes moving-cloud {
-//   0% {
-//     margin-top: 150%;
-//   }
+  100% {
+    transform: rotate( 1deg );
+  }
+}
 
-//   100% {
-//     margin-top: -150%;
-//   }
-// }
+@keyframes eyes-blink {
+  0% {
+    transform: scaleY( 0.1 );
+  }
+
+  2% {
+    transform: scaleY( 1 );
+  }
+
+  4% {
+    transform: scaleY( 0.1 );
+  }
+
+  6% {
+    transform: scaleY( 1 );
+  }
+
+  100% {
+    transform: scaleY( 1 );
+  }
+}
+
+@keyframes dress-sway {
+  0% {
+    transform: rotate( -3deg );
+  }
+
+  6% {
+    transform: rotate( -3deg );
+  }
+
+  94% {
+    transform: rotate( 10deg );
+  }
+
+  100% {
+    transform: rotate( 10deg );
+  }
+}
+
+@keyframes arm-move-right {
+  0% {
+    transform: rotate( -10deg );
+  }
+
+  5% {
+    transform: rotate( -10deg );
+  }
+
+  95% {
+    transform: rotate( -2deg );
+  }
+
+  100% {
+    transform: rotate( -2deg );
+  }
+}
+
+@keyframes moving-cloud {
+  0% {
+    margin-top: 100vh;
+  }
+
+  100% {
+    margin-top: -100vh;
+  }
+}

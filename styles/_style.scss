@@ -309,10 +309,10 @@ body {
   }
 
   &::after {
-    @include pseduo-div( 82.8%, 18%, $n );
+    @include pseduo-div( 82.2%, 18%, $n );
     border-radius: 50%;
     top: 56.7%;
-    left: 5.4%;
+    left: 5.7%;
     transform: rotate( -3deg );
   }
 

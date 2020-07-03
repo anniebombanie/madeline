@@ -273,14 +273,14 @@ body {
 
 .body::after {
   content: '';
-  width: 82.8%;
+  width: 82.2%;
   height: 18%;
   display: block;
   position: absolute;
   background-color: #010152;
   border-radius: 50%;
   top: 56.7%;
-  left: 5.4%;
+  left: 5.7%;
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
 }

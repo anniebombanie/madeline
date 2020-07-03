@@ -123,12 +123,6 @@ body {
 
 .madeline-container {
   @include w-h( 40.5vmin, 91.8vmin );
-  position: relative;
-  // background: url('https://i.pinimg.com/236x/b3/7e/3f/b37e3fe59e38fdcd3ca9b7cd63fb0063--strong-character-s-kids.jpg') 53.5% 340% no-repeat;
-  // opacity: 0.2;
-  // background-size: auto 96%;
-  // border: 1px solid red;
-  z-index: 10;
   animation: body-move 1.3s infinite alternate ease-in-out;
 }
 
@@ -136,7 +130,6 @@ body {
   @include w-h( 20vmin, 24vmin );
   position: absolute;
   background:
-    radial-gradient( 1% 1% at 25% 30%, rgba( $w, 0.75 ) 1.4vmin, $t 1.5vmin ),
     $r;
   border-radius: 50%;
   top: 50%;
@@ -192,7 +185,6 @@ body {
   &__hair,
   &__hair--fringe {
     @include w-h( 80%, 47% );
-    // border: 1px dashed green;
     position: absolute;
     top: 52.5%;
     left: 12%;
@@ -231,17 +223,11 @@ body {
   &__face {
     @include w-h( 44%, 42% );
     border-radius: 30% 30% 60% 70% / 80% 80% 70% 70%;
-    // box-shadow: inset 1.5vmin 0 0 0 darken( $skin, 5 );
     position: absolute;
     top: 57%;
     left: 33.5%;
     z-index: 10;
     background:
-      // eyebrows
-      // radial-gradient( circle at 37% 36%, $skin 1.5vmin, $t 1.6vmin ),
-      // radial-gradient( 1% 1.2% at 35% 27%, rgba( $b, 0.75 ) 0.9vmin, $t 1vmin ),
-      // radial-gradient( circle at 72% 36%, $skin 1.5vmin, $t 1.6vmin ),
-      // radial-gradient( 1% 1.2% at 73% 27%, rgba( $b, 0.75 ) 0.9vmin, $t 1vmin ),
       // nose
       radial-gradient( 12% 8% at 58% 60%, $skin 0.5vmin, $t 0.7vmin ),
       radial-gradient( 10% 8% at 59% 63%, rgba( $b, 0.75 ) 0.4vmin, $t 0.6vmin ),
@@ -284,7 +270,6 @@ body {
     &::after,
     &::before {
       @include pseduo-div( 24%, 30%, rgba( $b, 0.8 ));
-      // border: 1px solid green;
       background:
         radial-gradient( 1% 1.5% at 20% 120%, $t 3vmin, $b 3.1vmin, $b 5vmin, $t 5.1vmin),
         radial-gradient( 2.2% 1.5% at 22% 107%, $t 3vmin, $b 3.2vmin, $b 6vmin, $t 6vmin);
@@ -328,10 +313,10 @@ body {
   }
 
   &::after {
-    @include pseduo-div( 82.2%, 18%, $n );
+    @include pseduo-div( 82.6%, 18%, $n );
     border-radius: 50%;
     top: 56.7%;
-    left: 5.7%;
+    left: 5.6%;
     transform: rotate( -3deg );
   }
 
@@ -403,7 +388,6 @@ body {
     transform-origin: 100% 0;
 
     &::before {
-      // border: 1px dashed green;
       top: 0%;
       left: -18%;
       transform: perspective( 20vmin ) rotateY( 135deg );
@@ -504,6 +488,18 @@ body {
   }
 
   6% {
+    transform: scaleY( 1 );
+  }
+
+  70% {
+    transform: scaleY( 1 );
+  }
+
+  72% {
+    transform: scaleY( 0.1 );
+  }
+
+  74% {
     transform: scaleY( 1 );
   }
 

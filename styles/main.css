@@ -11,8 +11,8 @@ html {
 /* --- Colours --- */
 body {
   margin: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #d8b9d7), to(#ffc0cb));
-  background: linear-gradient(#d8b9d7 60%, #ffc0cb);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #d8b9d7), to(#ffc0cb));
+  background: linear-gradient(#d8b9d7 50%, #ffc0cb);
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -521,39 +521,39 @@ body {
 
 @-webkit-keyframes dress-sway {
   0% {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg);
+    -webkit-transform: rotate(-1.9deg);
+            transform: rotate(-1.9deg);
   }
   6% {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg);
+    -webkit-transform: rotate(-1.9deg);
+            transform: rotate(-1.9deg);
   }
   94% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
   }
   100% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
   }
 }
 
 @keyframes dress-sway {
   0% {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg);
+    -webkit-transform: rotate(-1.9deg);
+            transform: rotate(-1.9deg);
   }
   6% {
-    -webkit-transform: rotate(-3deg);
-            transform: rotate(-3deg);
+    -webkit-transform: rotate(-1.9deg);
+            transform: rotate(-1.9deg);
   }
   94% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
   }
   100% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
   }
 }
 
@@ -567,12 +567,12 @@ body {
             transform: rotate(-10deg);
   }
   95% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
   }
   100% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
   }
 }
 
@@ -586,12 +586,12 @@ body {
             transform: rotate(-10deg);
   }
   95% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
   }
   100% {
-    -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
   }
 }
 

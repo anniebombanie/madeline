@@ -13,7 +13,6 @@ $y: #f7e957;
 $skin: #efdebd;
 $pr: #d8b9d7;
 $pk: #ffc0cb;
-$peach: #e89b9d;
 $r: #dd2602;
 $w: #fff;
 $b: #000;
@@ -35,7 +34,7 @@ $t: transparent;
 
 body {
   margin: 0;
-  background: linear-gradient( $pr 60%, $pk );
+  background: linear-gradient( $pr 50%, $pk );
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -491,19 +490,19 @@ body {
 
 @keyframes dress-sway {
   0% {
-    transform: rotate( -3deg );
+    transform: rotate( -1.9deg );
   }
 
   6% {
-    transform: rotate( -3deg );
+    transform: rotate( -1.9deg );
   }
 
   94% {
-    transform: rotate( 10deg );
+    transform: rotate( 7deg );
   }
 
   100% {
-    transform: rotate( 10deg );
+    transform: rotate( 7deg );
   }
 }
 
@@ -517,11 +516,11 @@ body {
   }
 
   95% {
-    transform: rotate( -2deg );
+    transform: rotate( -4deg );
   }
 
   100% {
-    transform: rotate( -2deg );
+    transform: rotate( -4deg );
   }
 }
 

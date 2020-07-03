@@ -220,8 +220,8 @@ body {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 50%;
-  -webkit-animation: eyes-blink 7s infinite;
-          animation: eyes-blink 7s infinite;
+  -webkit-animation: eyes-blink 6s infinite;
+          animation: eyes-blink 6s infinite;
 }
 
 .head__face::before {
@@ -231,7 +231,7 @@ body {
 
 .head__face::after {
   top: 34%;
-  left: 71%;
+  left: 70%;
 }
 
 .head__hat {
@@ -455,184 +455,88 @@ body {
 }
 
 @-webkit-keyframes body-move {
-  0% {
+  0%, 6% {
     -webkit-transform: rotate(-1deg);
             transform: rotate(-1deg);
   }
-  6% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
-  }
-  94% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
-  }
-  100% {
+  94%, 100% {
     -webkit-transform: rotate(1deg);
             transform: rotate(1deg);
   }
 }
 
 @keyframes body-move {
-  0% {
+  0%, 6% {
     -webkit-transform: rotate(-1deg);
             transform: rotate(-1deg);
   }
-  6% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
-  }
-  94% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
-  }
-  100% {
+  94%, 100% {
     -webkit-transform: rotate(1deg);
             transform: rotate(1deg);
   }
 }
 
 @-webkit-keyframes eyes-blink {
-  0% {
+  0%, 4%, 68% {
     -webkit-transform: scaleY(0.1);
             transform: scaleY(0.1);
   }
-  2% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  4% {
-    -webkit-transform: scaleY(0.1);
-            transform: scaleY(0.1);
-  }
-  6% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  70% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  72% {
-    -webkit-transform: scaleY(0.1);
-            transform: scaleY(0.1);
-  }
-  74% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  100% {
+  2%, 6%, 66%, 70%, 100% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
   }
 }
 
 @keyframes eyes-blink {
-  0% {
+  0%, 4%, 68% {
     -webkit-transform: scaleY(0.1);
             transform: scaleY(0.1);
   }
-  2% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  4% {
-    -webkit-transform: scaleY(0.1);
-            transform: scaleY(0.1);
-  }
-  6% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  70% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  72% {
-    -webkit-transform: scaleY(0.1);
-            transform: scaleY(0.1);
-  }
-  74% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  100% {
+  2%, 6%, 66%, 70%, 100% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
   }
 }
 
 @-webkit-keyframes dress-sway {
-  0% {
+  0%, 6% {
     -webkit-transform: rotate(-1.9deg);
             transform: rotate(-1.9deg);
   }
-  6% {
-    -webkit-transform: rotate(-1.9deg);
-            transform: rotate(-1.9deg);
-  }
-  94% {
-    -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
-  }
-  100% {
+  94%, 100% {
     -webkit-transform: rotate(7deg);
             transform: rotate(7deg);
   }
 }
 
 @keyframes dress-sway {
-  0% {
+  0%, 6% {
     -webkit-transform: rotate(-1.9deg);
             transform: rotate(-1.9deg);
   }
-  6% {
-    -webkit-transform: rotate(-1.9deg);
-            transform: rotate(-1.9deg);
-  }
-  94% {
-    -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
-  }
-  100% {
+  94%, 100% {
     -webkit-transform: rotate(7deg);
             transform: rotate(7deg);
   }
 }
 
 @-webkit-keyframes arm-move-right {
-  0% {
+  0%, 5% {
     -webkit-transform: rotate(-10deg);
             transform: rotate(-10deg);
   }
-  5% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
-  }
-  95% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  100% {
+  95%, 100% {
     -webkit-transform: rotate(-4deg);
             transform: rotate(-4deg);
   }
 }
 
 @keyframes arm-move-right {
-  0% {
+  0%, 5% {
     -webkit-transform: rotate(-10deg);
             transform: rotate(-10deg);
   }
-  5% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
-  }
-  95% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  100% {
+  95%, 100% {
     -webkit-transform: rotate(-4deg);
             transform: rotate(-4deg);
   }

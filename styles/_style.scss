@@ -243,7 +243,7 @@ body {
     &::after {
       @include pseduo-div( 5%, 11%, rgba( $b, 0.8 ));
       border-radius: 50%;
-      animation: eyes-blink 7s infinite;
+      animation: eyes-blink 6s infinite ;
     }
 
     &::before {
@@ -253,7 +253,7 @@ body {
 
     &::after {
       top: 34%;
-      left: 71%;
+      left: 70%;
     }
   }
 
@@ -457,89 +457,41 @@ body {
 }
 
 @keyframes body-move {
-  0% {
+  0%, 6% {
     transform: rotate( -1deg );
   }
 
-  6% {
-    transform: rotate( -1deg );
-  }
-
-  94% {
-    transform: rotate( 1deg );
-  }
-
-  100% {
+  94%, 100% {
     transform: rotate( 1deg );
   }
 }
 
 @keyframes eyes-blink {
-  0% {
+  0%, 4%, 68% {
     transform: scaleY( 0.1 );
   }
 
-  2% {
-    transform: scaleY( 1 );
-  }
-
-  4% {
-    transform: scaleY( 0.1 );
-  }
-
-  6% {
-    transform: scaleY( 1 );
-  }
-
-  70% {
-    transform: scaleY( 1 );
-  }
-
-  72% {
-    transform: scaleY( 0.1 );
-  }
-
-  74% {
-    transform: scaleY( 1 );
-  }
-
-  100% {
+  2%, 6%, 66%, 70%, 100% {
     transform: scaleY( 1 );
   }
 }
 
 @keyframes dress-sway {
-  0% {
+  0%, 6% {
     transform: rotate( -1.9deg );
   }
 
-  6% {
-    transform: rotate( -1.9deg );
-  }
-
-  94% {
-    transform: rotate( 7deg );
-  }
-
-  100% {
+  94%, 100% {
     transform: rotate( 7deg );
   }
 }
 
 @keyframes arm-move-right {
-  0% {
+  0%, 5% {
     transform: rotate( -10deg );
   }
 
-  5% {
-    transform: rotate( -10deg );
-  }
-
-  95% {
-    transform: rotate( -4deg );
-  }
-
-  100% {
+  95%, 100% {
     transform: rotate( -4deg );
   }
 }

@@ -477,22 +477,46 @@ body {
 }
 
 @-webkit-keyframes eyes-blink {
-  0%, 4%, 68% {
+  0% {
     -webkit-transform: scaleY(0.1);
             transform: scaleY(0.1);
   }
-  2%, 6%, 66%, 70%, 100% {
+  2% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  4% {
+    -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+  }
+  6% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
   }
 }
 
 @keyframes eyes-blink {
-  0%, 4%, 68% {
+  0% {
     -webkit-transform: scaleY(0.1);
             transform: scaleY(0.1);
   }
-  2%, 6%, 66%, 70%, 100% {
+  2% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  4% {
+    -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+  }
+  6% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  100% {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
   }

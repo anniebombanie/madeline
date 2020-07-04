@@ -231,12 +231,12 @@ body {
     background:
       // nose
       radial-gradient( 12% 8% at 58% 60%, $skin 0.5vmin, $t 0.7vmin ),
-      radial-gradient( 10% 8% at 59% 63%, rgba( $b, 0.75 ) 0.4vmin, $t 0.6vmin ),
+      radial-gradient( 10% 8% at 59% 63%, rgba( $b, 0.8 ) 0.4vmin, $t 0.5vmin ),
       //mouth
       linear-gradient( -50deg, $t 46%, $skin 46.5% ),
       linear-gradient( 50deg, $t 51%, $skin 51.5% ),
-      radial-gradient( 2.4% 1.2% at 54% 74%, $skin 1.9vmin, $t 2.2vmin ),
-      radial-gradient( 2.2% 1.2% at 54% 76%, rgba( $b, 0.75 ) 2vmin, $t 2.2vmin ),
+      radial-gradient( 2.4% 1.2% at 54% 74%, $skin 1.9vmin, $t 2.1vmin ),
+      radial-gradient( 2.2% 1.2% at 54% 76%, rgba( $b, 0.8 ) 2vmin, $t 2.2vmin ),
       $skin;
 
     // eyes
@@ -318,7 +318,7 @@ body {
     @include pseduo-div( 82.6%, 18%, $n );
     border-radius: 50%;
     top: 56.7%;
-    left: 5.5%;
+    left: 5.4%;
     transform: rotate( -3deg );
   }
 
